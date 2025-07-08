@@ -5,14 +5,53 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Urban Edge</title>
   <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alumni+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+SC:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <div class="container">
-      <div class="logo">
-        <img src="logo.png" alt="Urban Edge Logo" />
-      </div>
-      <nav class="nav-links">
+
+  <header class="main-header">
+    <div class="top-nav">
+        <div class="container">
+            <div class="logo">
+                <img src="images/UE Logo.jpg" alt="Urban Edge Logo" />
+            </div>
+
+            <!-- Hamburger button (visible only on mobile) -->
+            <button class="menu-toggle" aria-label="Open Menu">&#9776;</button>
+
+            <!-- Desktop nav -->
+            <nav class="nav-links">
+                <ul>
+                <li><a href="#floorplans">Floorplans</a></li>
+                <li><a href="#lifestyle">Lifestyle</a></li>
+                <li><a href="#community">Community</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#applicant">Applicant Login</a></li>
+                <li><a href="#resident">Resident Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Info bar -->
+    <div class="info-bar">
+        <div class="container">
+                <a href="#" class="info-link" onclick="Tawk_API.toggle(); return false;">
+                    <span class="icon">💬</span> Chat Now
+                </a>          
+            <a href="#" class="info-link"><span class="icon">📧</span> Email Us</a>
+            <a href="#" class="info-link"><span class="icon">📞</span> 816-205-0993</a>
+        </div>
+    </div>
+
+
+    <!-- Mobile fullscreen menu -->
+    <div class="mobile-menu">
+      <button class="close-menu" aria-label="Close Menu">&times;</button>
+      <nav class="mobile-nav-links">
         <ul>
           <li><a href="#floorplans">Floorplans</a></li>
           <li><a href="#lifestyle">Lifestyle</a></li>
@@ -20,41 +59,55 @@
           <li><a href="#contact">Contact Us</a></li>
           <li><a href="#applicant">Applicant Login</a></li>
           <li><a href="#resident">Resident Login</a></li>
-          <li><a href="#" id="chat-now">Chat Now</a></li>
         </ul>
       </nav>
-      <div class="hamburger" id="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </div>
-    <div class="mobile-menu" id="mobile-menu">
-      <span class="close" id="close-menu">&times;</span>
-      <ul>
-        <li><a href="#floorplans">Floorplans</a></li>
-        <li><a href="#lifestyle">Lifestyle</a></li>
-        <li><a href="#community">Community</a></li>
-        <li><a href="#contact">Contact Us</a></li>
-        <li><a href="#applicant">Applicant Login</a></li>
-        <li><a href="#resident">Resident Login</a></li>
-        <li><a href="#" id="mobile-chat-now">Chat Now</a></li>
-      </ul>
     </div>
   </header>
+  <main>
+    <section class="hero">
+        <div class="hero-overlay">
+            <div class="container">
+                <h1>Urban Edge<br />Apartments</h1>
+                <p>Overland Park</p>
+            </div>
+        </div>
+      </section>
+      <section class="intro">
+        <div class="intro-container">
+          <div class="intro-text">
+            <h2><span>Style.</span> <span>Comfort.</span> <span>Community.</span></h2>
+            <p>
+              Live a little bolder in downtown Overland Park. The Urban Edge offers 36 modern
+              apartments in a boutique community built for design-lovers and lifestyle-seekers alike.
+            </p>
+            <div class="intro-buttons">
+              <a href="#" class="btn primary">Book a Tour</a>
+              <a href="#" class="btn outline">Apply Now</a>
+            </div>
+          </div>
+          <div class="intro-images">
+            <div class="tan-background"></div>
+            <img src="images/intro_girlwithdog.png" alt="Woman with dog" class="image-top" />
+            <img src="images/intro_girloncomputer.png" alt="Woman on laptop" class="image-bottom" />
+          </div>
+        </div>
+      </section>
+            
+  </main>
 
   <script src="script.js"></script>
-  <script type="text/javascript">
-    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-    (function () {
-      var s1 = document.createElement("script"),
-          s0 = document.getElementsByTagName("script")[0];
-      s1.async = true;
-      s1.src = 'https://embed.tawk.to/686d7d2bb0df99190ce93f41/1ivlr1scv';
-      s1.charset = 'UTF-8';
-      s1.setAttribute('crossorigin', '*');
-      s0.parentNode.insertBefore(s1, s0);
+  <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/686d7d2bb0df99190ce93f41/1ivlr1scv';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
     })();
-  </script>
+    </script>
+    <!--End of Tawk.to Script-->
 </body>
 </html>
