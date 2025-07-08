@@ -41,6 +41,10 @@ body {
     text-transform: uppercase;
     font-weight: bold;
     font-size: 0.9rem;
+    font-family: "Alumni Sans SC", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
   }
   
   .nav-links a:hover {
