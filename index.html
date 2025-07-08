@@ -1,42 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+SC:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    <title>Urban Edge</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Urban Edge</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-   <header id="main-header">
-        <div class="top-nav">
-            <div class="logo">
-                <img src="images/UE Logo.jpg" alt="Urban Edge Logo" />
-              </div>
-        <nav class="nav-links">
-            <ul>
-                <li><a href="#floorplans">Floorplans</a></li>
-                <li><a href="#lifestyle">Lifestyle</a></li>
-                <li><a href="#community">Community</a></li>
-                <li><a href="#contact">Contact Us</a></li>
-                <li><a href="#applicant">Applicant Login</a></li>
-                <li><a href="#resident">Resident Login</a></li>
-            </ul>
-        </nav>
-        </div>
-        <div class="info-bar">
-            <a href="#" class="info-link"><span class="icon">💬</span> Chat Now</a>
-            <a href="mailto:info@example.com" class="info-link"><span class="icon">✉️</span> Email Us</a>
-            <a href="tel:8162050993" class="info-link"><span class="icon">📞</span> 816-205-0993</a>
-          </div>
-   </header>
-   <main>
 
-   </main>
-   <footer>
+  <header class="main-header">
+    <div class="top-nav">
+      <div class="logo">
+        <img src="images/UE Logo.jpg" alt="Urban Edge Logo" />
+      </div>
 
-   </footer>
+      <!-- Hamburger button (visible only on mobile) -->
+      <button class="menu-toggle" aria-label="Open Menu">&#9776;</button>
+
+      <!-- Desktop nav -->
+      <nav class="nav-links">
+        <ul>
+          <li><a href="#floorplans">Floorplans</a></li>
+          <li><a href="#lifestyle">Lifestyle</a></li>
+          <li><a href="#community">Community</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+          <li><a href="#applicant">Applicant Login</a></li>
+          <li><a href="#resident">Resident Login</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Info bar -->
+    <div class="info-bar">
+      <a href="#" class="info-link"><span class="icon">💬</span> Chat Now</a>
+      <a href="#" class="info-link"><span class="icon">📧</span> Email Us</a>
+      <a href="#" class="info-link"><span class="icon">📞</span> 816-205-0993</a>
+    </div>
+
+    <!-- Mobile fullscreen menu -->
+    <div class="mobile-menu">
+      <button class="close-menu" aria-label="Close Menu">&times;</button>
+      <nav class="mobile-nav-links">
+        <ul>
+          <li><a href="#floorplans">Floorplans</a></li>
+          <li><a href="#lifestyle">Lifestyle</a></li>
+          <li><a href="#community">Community</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+          <li><a href="#applicant">Applicant Login</a></li>
+          <li><a href="#resident">Resident Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <script src="script.js"></script>
 </body>
 </html>
