@@ -25,6 +25,17 @@ body {
     font-size: 1.25rem;
   }
   
+  .nav-links ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-links li {
+    margin-left: 1.5rem;
+  }
+  
   .nav-links a {
     color: white;
     text-decoration: none;
