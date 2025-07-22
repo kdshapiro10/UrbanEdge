@@ -288,7 +288,7 @@ img {
 .fp-intro-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: center;
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem 1rem;
@@ -300,13 +300,16 @@ img {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  margin: 0 auto;
   width: 100%;
-  gap: 2rem;
+  max-width: 1100px;
+  gap: 3rem;
 }
 
 .fp-intro-text {
-  flex: 1 1 45%;
+  flex: 1 1 500;
   max-width: 600px;
+  padding-left: 1rem;
 }
 
 .fp-intro-text h3, h2 {
@@ -325,8 +328,14 @@ img {
 
 }
 
+.fp-intro-text p {
+  color: rgb(111, 111, 111);
+  margin-bottom: 50px;
+  margin-left: 10px;
+}
+
 .fp-intro-image {
-  flex: 1 1 45%;
+  flex: 1 1 500;
   max-width: 600px;
 }
 
@@ -342,11 +351,11 @@ img {
   transition: transform 0.1s ease-out;
 }
 
-
 .fp-intro-container .btn {
   align-self: center;
   padding: .8rem 1.5rem;
   font-size: 1.5rem;
+  margin-top: 100px;
   text-transform: uppercase;
   font-weight: 600;
   font-family: "Alumni Sans SC", sans-serif; 
