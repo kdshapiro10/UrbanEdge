@@ -36,3 +36,14 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const img = document.querySelector(".parallax-img");
+
+  if (!img) return;
+
+  window.addEventListener("scroll", function () {
+    const offset = window.scrollY * 0.1; // adjust for intensity
+    img.style.transform = `translateY(${offset}px)`;
+  });
+});

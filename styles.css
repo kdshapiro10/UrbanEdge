@@ -308,6 +308,22 @@ img {
   max-width: 600px;
 }
 
+.fp-intro-text h3, h2 {
+  font-family: "Alumni Sans SC", sans-serif; 
+}
+
+.fp-intro-text h3 {
+  color:#9B876C;
+  font-style: italic;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.fp-intro-text h2 {
+  font-size: 28px;
+
+}
+
 .fp-intro-image {
   flex: 1 1 45%;
   max-width: 600px;
@@ -317,15 +333,22 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
+  filter: drop-shadow(10px 10px 0px #9B876C);
 }
+
+.parallax-img {
+  will-change: transform;
+  transition: transform 0.1s ease-out;
+}
+
 
 .fp-intro-container .btn {
   align-self: center;
   padding: .8rem 1.5rem;
-  font-size: .9rem;
+  font-size: 1.5rem;
   text-transform: uppercase;
   font-weight: 600;
-  font-family: "Inter", sans-serif;
+  font-family: "Alumni Sans SC", sans-serif; 
   background-color: #9B876C;
   color: white;
   border: none;
