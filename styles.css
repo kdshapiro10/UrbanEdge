@@ -205,7 +205,7 @@ img {
     background-image: url('images/Northwest_View_Building.png'); /* Replace with actual image path */
     background-size: cover;
     background-position: center;
-    height: 500px;
+    height: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -245,19 +245,156 @@ img {
     letter-spacing: 1px;
     text-transform: uppercase;
   }
-/*MAIN HERO IMAGE*/
+/*END MAIN HERO IMAGE*/
 
 /*FLOORPLANS HERO IMAGE*/
+.fp-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+    z-index: 1;
+}
+
+.fp-hero > * {
+    position: relative;
+    z-index: 2; /* So your text stays above the overlay */
+}
+
 .fp-hero {
     position: relative;
-    background-image: url('images/'); /* Replace with actual image path */
+    background-image: url('images/fp_hero.jpeg'); /* Replace with actual image path */
     background-size: cover;
     background-position: center;
-    height: 500px;
+    height: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
+.fp-hero-container {
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 35px;
+  font-family: "Alumni Sans", sans-serif;
+}
+/*END FLOORPLAN HERO IMAGE*/
+
+/*LIFESTYLE HERO IMAGE*/
+.lifestyle-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+    z-index: 1;
+}
+
+.lifestyle-hero > * {
+    position: relative;
+    z-index: 2; /* So your text stays above the overlay */
+}
+
+.lifestyle-hero {
+    position: relative;
+    background-image: url('images/Courtyard_1.png'); /* Replace with actual image path */
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lifestyle-hero-container {
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 35px;
+  font-family: "Alumni Sans", sans-serif;
+}
+/*END LIFESTYLE HERO IMAGE*/
+
+/*COMMUNITY HERO IMAGE*/
+.community-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+    z-index: 1;
+}
+
+.community-hero > * {
+    position: relative;
+    z-index: 2; /* So your text stays above the overlay */
+}
+
+.community-hero {
+    position: relative;
+    background-image: url('images/downtown-op.jpg'); /* Replace with actual image path */
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.community-hero-container {
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 35px;
+  font-family: "Alumni Sans", sans-serif;
+}
+/*END COMMUNITY HERO IMAGE*/
+
+/*CONTACT US HERO IMAGE*/
+.contact-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+    z-index: 1;
+}
+
+.contact-hero > * {
+    position: relative;
+    z-index: 2; /* So your text stays above the overlay */
+}
+
+.contact-hero {
+    position: relative;
+    background-image: url('images/Courtyard_2.png'); /* Replace with actual image path */
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-hero-container {
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 35px;
+  font-family: "Alumni Sans", sans-serif;
+}
+/*END CONTACT US HERO IMAGE*/
+
   .intro {
     background-color: #fdfdfd;
     padding-top: 1.8rem
