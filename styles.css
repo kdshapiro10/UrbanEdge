@@ -284,6 +284,7 @@ img {
 }
 /*END FLOORPLAN HERO IMAGE*/
 
+/*FLOORPLAN INTRO DIV*/
 .fp-intro-container {
   display: flex;
   flex-direction: column;
@@ -354,7 +355,7 @@ img {
   border: none;
   text-decoration: none;
 }
-
+/*END FlOORPLAN INTRO DIV*/
 
 /*LIFESTYLE HERO IMAGE*/
 .lifestyle-hero::before {
