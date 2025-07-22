@@ -89,9 +89,15 @@ img {
   }
   
   .nav-links a:hover {
-    text-decoration: underline;
+    color: rgb(151, 150, 150);
   }
   
+.nav-links a.active,
+.mobile-nav-links a.active {
+  color: #9B876C; /* <-- change to your highlight color */
+  font-weight: bold;
+}
+
   /* Info/contact bar */
   .info-bar {
     background-color: #9B876C;
@@ -193,6 +199,7 @@ img {
     text-decoration: underline;
   }
 
+  /*MAIN HERO IMAGE*/
   .hero {
     position: relative;
     background-image: url('images/Northwest_View_Building.png'); /* Replace with actual image path */
@@ -238,7 +245,19 @@ img {
     letter-spacing: 1px;
     text-transform: uppercase;
   }
-  
+/*MAIN HERO IMAGE*/
+
+/*FLOORPLANS HERO IMAGE*/
+.fp-hero {
+    position: relative;
+    background-image: url('images/'); /* Replace with actual image path */
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
   .intro {
     background-color: #fdfdfd;
     padding-top: 1.8rem
