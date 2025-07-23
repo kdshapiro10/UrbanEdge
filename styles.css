@@ -10,15 +10,7 @@ html, body {
     overflow-x: hidden;
   }
   
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-  }
-  .intro-image-container {
-    width: 100%;
-    max-width: 100%;
-  }
+
   
   
   body {
@@ -199,7 +191,7 @@ img {
     text-decoration: underline;
   }
 
-  /*MAIN HERO IMAGE*/
+  /*HOME HERO IMAGE*/
   .hero {
     position: relative;
     background-image: url('images/Northwest_View_Building.png'); /* Replace with actual image path */
@@ -245,7 +237,91 @@ img {
     letter-spacing: 1px;
     text-transform: uppercase;
   }
-/*END MAIN HERO IMAGE*/
+/*END HOME HERO IMAGE*/
+
+/*HOME INTRO*/
+.home-intro-container {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  gap: 2rem;
+}
+
+.home-intro-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1100px;
+  gap: 3rem;
+}
+
+
+.home-intro-text {
+  flex: 1 1 50%;
+  max-width: 600px;
+  padding-left: 1rem;
+}
+
+.home-intro-text h3, h2 {
+  font-family: "Alumni Sans SC", sans-serif; 
+}
+
+
+.home-intro-text h2 {
+  font-size: 28px;
+
+}
+
+.home-intro-text p {
+  color: rgb(111, 111, 111);
+  margin-bottom: 50px;
+  margin-left: 10px;
+}
+
+.home-intro-container .btn.outline .btn.primary {
+  align-self: center;
+  padding: .8rem 1.5rem;
+  font-size: 1.5rem;
+  margin-top: 100px;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: "Alumni Sans SC", sans-serif; 
+  background-color: #9B876C;
+  color: white;
+  border: none;
+  text-decoration: none;
+}
+
+.home-intro-image-stack {
+  margin-top: 20px;
+  position: relative;
+  flex: 1 1 45%;
+  max-width: 500px;
+  width: 100%;
+}
+
+
+.image-top {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: drop-shadow(10px 10px 0px #9b876c93);
+}
+
+.image-bottom {
+  width: 90%;
+  height: auto;
+  display: block;
+}
+
+
 
 /*FLOORPLANS HERO IMAGE*/
 .fp-hero::before {
@@ -307,7 +383,7 @@ img {
 }
 
 .fp-intro-text {
-  flex: 1 1 500;
+  flex: 1 1 50%;
   max-width: 600px;
   padding-left: 1rem;
 }
@@ -335,7 +411,7 @@ img {
 }
 
 .fp-intro-image {
-  flex: 1 1 500;
+  flex: 1 1 30%;
   max-width: 600px;
 }
 
@@ -592,7 +668,7 @@ img {
         font-size: 14px;
     }
 
-  }
+}
   
   @media (min-width: 769px) {
     .mobile-menu,
