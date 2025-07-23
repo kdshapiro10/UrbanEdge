@@ -3,27 +3,18 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-  }
+}
   
 html, body {
-    width: 100%;
+    margin: 0;
+    padding: 0;
     overflow-x: hidden;
   }
   
+  main {
+    max-width: 1200px;
+  }
 
-  
-  
-  body {
-    font-family: Arial, sans-serif;
-    background-color: white;
-  }
-  
-  .container {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 1rem;
-    width: 100%;
-  }
 
   .info-bar .container {
     display: flex;
@@ -32,11 +23,6 @@ html, body {
     gap: 2rem;
   }
 
-  .top-nav .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
   
   /* Header container */
   .main-header {
@@ -60,29 +46,7 @@ html, body {
 
   }
   
-  .nav-links ul {
-    display: flex;
-    list-style: none;
-    gap: 2rem;
-    left: 100px;
-  }
-  
-  .nav-links a {
-    color: white;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-family: "Alumni Sans SC", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 600;
-    font-style: normal;
-    font-size: 22px;
-    letter-spacing: 2px;
-  }
-  
-  .nav-links a:hover {
-    color: rgb(151, 150, 150);
-  }
+
   
 .nav-links a.active,
 .mobile-nav-links a.active {
@@ -109,9 +73,10 @@ html, body {
     font-weight: bold;
     text-decoration: none;
     text-transform: uppercase;
-    font-family: "Inter", sans-serif;
+    font-size: 18px;
     font-weight: 600;
     font-style: normal;
+    font-family: "Alumni Sans SC", sans-serif;
   }
   
   .info-link:hover {
@@ -171,6 +136,7 @@ html, body {
   
   .mobile-nav-links ul {
     list-style: none;
+    padding: 0;
     text-align: center;
   }
   
@@ -180,11 +146,12 @@ html, body {
   
   .mobile-nav-links a {
     color: white;
-    font-size: 1.25rem;
+    font-size: 1.85rem;
     text-transform: uppercase;
     font-weight: bold;
     text-decoration: none;
     letter-spacing: 2px;
+    font-family: "Alumni Sans SC", sans-serif;
   }
   
   .mobile-nav-links a:hover {
@@ -240,86 +207,7 @@ html, body {
 /*END HOME HERO IMAGE*/
 
 /*HOME INTRO*/
-.home-intro-container {
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  justify-content: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem 1rem;
-  gap: 2rem;
-}
 
-.home-intro-row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0 auto;
-  width: 100%;
-  max-width: 1100px;
-  gap: 3rem;
-}
-
-
-.home-intro-text {
-  flex: 1 1 50%;
-  max-width: 600px;
-  padding-left: 1rem;
-}
-
-.home-intro-text h3, h2 {
-  font-family: "Alumni Sans SC", sans-serif; 
-}
-
-
-.home-intro-text h2 {
-  font-size: 28px;
-
-}
-
-.home-intro-text p {
-  color: rgb(111, 111, 111);
-  margin-bottom: 50px;
-  margin-left: 10px;
-}
-
-.home-intro-container .btn.outline .btn.primary {
-  align-self: center;
-  padding: .8rem 1.5rem;
-  font-size: 1.5rem;
-  margin-top: 100px;
-  text-transform: uppercase;
-  font-weight: 600;
-  font-family: "Alumni Sans SC", sans-serif; 
-  background-color: #9B876C;
-  color: white;
-  border: none;
-  text-decoration: none;
-}
-
-.home-intro-image-stack {
-  margin-top: 20px;
-  position: relative;
-  flex: 1 1 45%;
-  max-width: 500px;
-  width: 100%;
-}
-
-
-.image-top {
-  width: 100%;
-  height: auto;
-  display: block;
-  filter: drop-shadow(10px 10px 0px #9b876c93);
-}
-
-.image-bottom {
-  width: 90%;
-  height: auto;
-  display: block;
-}
 
 
 
@@ -361,85 +249,13 @@ html, body {
 /*END FLOORPLAN HERO IMAGE*/
 
 /*FLOORPLAN INTRO DIV*/
-.fp-intro-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem 1rem;
-  gap: 2rem;
-}
-
-.fp-intro-row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0 auto;
-  width: 100%;
-  max-width: 1100px;
-  gap: 3rem;
-}
-
-.fp-intro-text {
-  flex: 1 1 50%;
-  max-width: 600px;
-  padding-left: 1rem;
-}
-
-.fp-intro-text h3, h2 {
-  font-family: "Alumni Sans SC", sans-serif; 
-}
-
-.fp-intro-text h3 {
-  color:#9B876C;
-  font-style: italic;
-  font-size: 20px;
-  font-weight: 500;
-}
-
-.fp-intro-text h2 {
-  font-size: 28px;
-
-}
-
-.fp-intro-text p {
-  color: rgb(111, 111, 111);
-  margin-bottom: 50px;
-  margin-left: 10px;
-}
-
-.fp-intro-image {
-  flex: 1 1 30%;
-  max-width: 600px;
-}
-
-.fp-intro-image img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  filter: drop-shadow(10px 10px 0px #9B876C);
-}
 
 .parallax-img {
   will-change: transform;
   transition: transform 0.1s ease-out;
 }
 
-.fp-intro-container .btn {
-  align-self: center;
-  padding: .8rem 1.5rem;
-  font-size: 1.5rem;
-  margin-top: 100px;
-  text-transform: uppercase;
-  font-weight: 600;
-  font-family: "Alumni Sans SC", sans-serif; 
-  background-color: #9B876C;
-  color: white;
-  border: none;
-  text-decoration: none;
-}
+
 /*END FlOORPLAN INTRO DIV*/
 
 /*LIFESTYLE HERO IMAGE*/
@@ -520,30 +336,30 @@ html, body {
 
 /*CONTACT US HERO IMAGE*/
 .contact-hero::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
-    z-index: 1;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+  z-index: 1;
 }
 
 .contact-hero > * {
-    position: relative;
-    z-index: 2; /* So your text stays above the overlay */
+  position: relative;
+  z-index: 2; /* So your text stays above the overlay */
 }
 
 .contact-hero {
-    position: relative;
-    background-image: url('images'); /* Replace with actual image path */
-    background-size: cover;
-    background-position: center;
-    height: 400px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  position: relative;
+  background-image: url('images/Courtyard_2.png'); /* Replace with actual image path */
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .contact-hero-container {
@@ -555,148 +371,97 @@ html, body {
 }
 /*END CONTACT US HERO IMAGE*/
 
-  .intro {
-    background-color: #fdfdfd;
-    padding-top: 1.8rem
+.btn {
+  padding: .8rem 1.5rem;
+  font-size: .7rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: "Inter", sans-serif;
   }
   
-  .intro-container {
-    max-width: 280px;   
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 1rem;
+.btn.primary {
+  background-color: #9B876C;
+  color: white;
+  border: none;
+}
+  
+.btn.outline {
+  border: 2px solid black;
+  background: transparent;
+  color: black;
+}
+  
+
+  
+@keyframes menuFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  
-  .intro-text {
-    flex: 1;
-    max-width: 280px;
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
+}
   
-  .intro-text h2 {
-    font-size: 30px;
-    width: 300px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 1rem;
-    font-family: "Alumni Sans SC", sans-serif; 
+
+/* Responsive behavior */
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
   }
-  
-  .intro-text p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: #333;
-    margin-bottom: 2rem;
-    font-family: "Inter", sans-serif;
-    width: 300px;
-  }
-  
-  .intro-buttons {
-    display: flex;
-    gap: 1rem;
-  }
-  
-  .btn {
-    padding: .8rem 1.5rem;
-    font-size: .7rem;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: 600;
-    font-family: "Inter", sans-serif;
-  }
-  
-  .btn.primary {
-    background-color: #9B876C;
-    color: white;
-    border: none;
-  }
-  
-  .btn.outline {
-    border: 2px solid black;
-    background: transparent;
-    color: black;
-  }
-  
-  .intro-images {
-    position: relative;
-    flex: 1;
-    margin-top: 10px;
-    margin-left: 60px;
-    display: flex;
-    align-items: flex-start;
-  }
-  
-  .image-top {
-    width: 70%;
-    z-index: 2;
-    position: absolute;
-    left: -65px;
-    
-  }
-  
-  .image-bottom {
-    width: 130%;
-    margin-top: 80px;
-  }
-  
-  @keyframes menuFadeIn {
-    0% {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  
-  /* Responsive behavior */
-  
-  @media (max-width: 768px) {
-    .nav-links {
-      display: none;
-    }
   
     .menu-toggle {
       display: block;
     }
 
-    .info-link {
-        font-size: 14px;
-    }
 
 }
   
-  @media (min-width: 769px) {
-    .mobile-menu,
-    .menu-toggle {
-      display: none;
-    }
+@media (min-width: 769px) {
+  /* Show desktop nav, hide mobile */
+  .nav-links {
+    display: flex !important;
+    flex-direction: row;
+    gap: 2rem;
+  }
 
-    .intro-container {
-      max-width: 769px;
-    }
+  .menu-toggle,
+  .mobile-menu {
+    display: none !important;
+  }
+
+  .info-link {
+    font-size: 20px;
+  }  
+
+    .nav-links ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    left: 100px;
   }
   
-  @media (min-width:1024px) {
-    .intro-container {
-      max-width: 1000px;
-      margin-left: 30px;
-    }
-
-    .image-top {
-      width: 50%;
-      margin-left: 70px;
-    }
-
-    .image-bottom {
-      width: 75%;
-      margin-left: 130px;
-    }
-    .logo img {
-        margin-left: -0px;
-    }
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: "Alumni Sans SC", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 20px;
+    letter-spacing: 2px;
   }
+  
+  .nav-links a:hover {
+    color: rgb(151, 150, 150);
+  }
+}
+  
+@media (min-width:1024px) {
+  
+}
