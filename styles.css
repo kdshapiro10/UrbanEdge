@@ -464,7 +464,7 @@ main {
     align-items: center;
     color: white;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 26px;
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 600;
@@ -472,8 +472,11 @@ main {
     font-family: "Alumni Sans SC", sans-serif;
   }
 
+  .label:hover {
+    text-decoration: underline;
+  }
   .icon {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     margin-right: 13px;
   }
 }
