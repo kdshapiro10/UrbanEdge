@@ -23,15 +23,23 @@
 
             <!-- Desktop nav -->
             <nav class="nav-links">
-                <ul>
-                  <li><a href="floorplans.html">Floorplans</a></li>
-                  <li><a href="lifestyle.html">Lifestyle</a></li>
-                  <li><a href="community.html">Community</a></li>
-                  <li><a href="contact.html">Contact Us</a></li>
-                  <li><a href="#applicant">Applicant Login</a></li>
-                  <li><a href="#resident">Resident Login</a></li>
-                  </ul>
+              <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <div class="dropdown">
+                  <button>Floorplans ▾</button>
+                  <div class="dropdown-tabs">
+                    <a href="one-bedroom.html">One Bedroom</a>
+                    <a href="two-bedroom.html">Two Bedrooms</a>
+                  </div>
+                </div>
+                <li><a href="lifestyle.html">Lifestyle</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="#applicant">Applicant Login</a></li>
+                <li><a href="#resident">Resident Login</a></li>
+              </ul>
             </nav>
+
         </div>
     </div>
 
@@ -52,7 +60,14 @@
       <button class="close-menu" aria-label="Close Menu">&times;</button>
       <nav class="mobile-nav-links">
         <ul>
-          <li><a href="floorplans.html">Floorplans</a></li>
+          <li><a href="index.html">Home</a></li>
+          <div class="dropdown">
+                  <button>Floorplans ▾</button>
+                  <div class="dropdown-tabs">
+                    <a href="one-bedroom.html">One Bedroom</a>
+                    <a href="two-bedroom.html">Two Bedrooms</a>
+                  </div>
+                </div>
           <li><a href="lifestyle.html">Lifestyle</a></li>
           <li><a href="community.html">Community</a></li>
           <li><a href="contact.html">Contact Us</a></li>
@@ -94,6 +109,7 @@
 
 
 <script src="script.js"></script>
+
 <!--Start of Tawk.to Script-->
 <script type="text/javascript">
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();

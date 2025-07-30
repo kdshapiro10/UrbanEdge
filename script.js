@@ -47,3 +47,4 @@ document.addEventListener("DOMContentLoaded", function () {
     img.style.transform = `translateY(${offset}px)`;
   });
 });
+

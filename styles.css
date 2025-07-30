@@ -51,6 +51,36 @@ main {
   font-weight: bold;
 }
 
+.dropdown button {
+  background-color: black;
+  color: white;
+  font-family: "Alumni Sans SC", sans-serif;
+  font-size: 1.85rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown a {
+  display: block;
+  text-decoration: none;
+  padding: 10px 6px;
+}
+
+.dropdown .dropdown-tabs {
+  display: none;
+  background-color: black;
+  position: absolute;
+  min-width: 100px;
+}
+
+.dropdown:hover .dropdown-tabs {
+  display: block;
+
+}
+
+
 /* Info/contact bar */
 .info-bar {
   background-color: #9B876C;
@@ -415,6 +445,9 @@ main {
       display: block;
     }
 
+  .dropdown-menu {
+    position: static;
+  }
 
 }
   
@@ -435,7 +468,7 @@ main {
     font-size: 20px;
   }  
 
-    .nav-links ul {
+  .nav-links ul {
     display: flex;
     list-style: none;
     gap: 2rem;
