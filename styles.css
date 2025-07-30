@@ -221,13 +221,14 @@ main {
 .home-intro-text h2 {
   font-family: "Alumni Sans SC", sans-serif; 
   font-weight: 600;
-  font-size: 38px;
+  font-size: 36px;
 }
 
 .home-intro-text p {
   margin-top: 10px;
   font-family: "Inter", sans-serif;
-  font-size: 22px;
+  font-size: 19px;
+  margin-left: 10px;
 }
 
 .intro-btns {
@@ -235,7 +236,6 @@ main {
   display: grid;
   grid-template-columns: 1fr;
   gap: 15px;
-  margin-bottom: 30px;
 }
 
 .intro-btns a {
@@ -245,7 +245,6 @@ main {
 
 home-intro-image-stack {
   display: grid;
-  margin-top: 40px;
   position: relative;
 }
 
@@ -254,7 +253,8 @@ home-intro-image-stack {
   top: 30px;
   left: 10px;
   z-index: 1;
-  position: relative;
+  position: relative; 
+  box-shadow: 10px 10px #9b876cc0 ;
 
 }
 
