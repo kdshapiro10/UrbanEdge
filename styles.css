@@ -51,34 +51,8 @@ main {
   font-weight: bold;
 }
 
-.dropdown button {
-  background-color: black;
-  color: white;
-  font-family: "Alumni Sans SC", sans-serif;
-  font-size: 1.85rem;
-  text-transform: uppercase;
-  font-weight: bold;
-  border: none;
-  cursor: pointer;
-}
 
-.dropdown a {
-  display: block;
-  text-decoration: none;
-  padding: 10px 6px;
-}
 
-.dropdown .dropdown-tabs {
-  display: none;
-  background-color: black;
-  position: absolute;
-  min-width: 100px;
-}
-
-.dropdown:hover .dropdown-tabs {
-  display: block;
-
-}
 
 
 /* Info/contact bar */
@@ -235,9 +209,60 @@ main {
 /*END HOME HERO IMAGE*/
 
 /*HOME INTRO*/
+.home-intro-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 350px;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
 
+.home-intro-text h2 {
+  font-family: "Alumni Sans SC", sans-serif; 
+  font-weight: 600;
+  font-size: 38px;
+}
 
+.home-intro-text p {
+  margin-top: 10px;
+  font-family: "Inter", sans-serif;
+  font-size: 22px;
+}
 
+.intro-btns {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.intro-btns a {
+  padding: 20px 105px;
+  font-size: 18px;
+}
+
+home-intro-image-stack {
+  display: grid;
+  margin-top: 40px;
+  position: relative;
+}
+
+ .image-top {
+  width: 50%;
+  top: 30px;
+  left: 10px;
+  z-index: 1;
+  position: relative;
+
+}
+
+.image-bottom {
+  width: 80%;
+  margin-left: 70px;
+  position: relative;
+}
 
 /*FLOORPLANS HERO IMAGE*/
 .fp-hero::before {
