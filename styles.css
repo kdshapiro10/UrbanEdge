@@ -238,9 +238,14 @@ main {
   gap: 15px;
 }
 
-.intro-btns a {
-  padding: 20px 105px;
+.intro-btns a:first-child {
   font-size: 18px;
+  padding-left: 105px;
+}
+
+.intro-btns a:last-child {
+  font-size: 18px;
+  padding-left: 112px;
 }
 
 home-intro-image-stack {
@@ -467,18 +472,85 @@ home-intro-image-stack {
   }
   
     .menu-toggle {
-      display: block;
-    }
+    display: block;
+  }
+}
 
-  .dropdown-menu {
-    position: static;
+
+@media (min-width: 768px) {
+   .nav-links {
+    display: none;
+  }
+  
+    .menu-toggle {
+    display: block;
   }
 
+  .label {
+    display: inline-flex;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    font-size: 26px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-style: normal;
+    font-family: "Alumni Sans SC", sans-serif;
+  }
+
+  .label:hover {
+    text-decoration: underline;
+  }
+  .icon {
+    font-size: 1.5rem;
+    margin-right: 13px;
+  }
+
+    .home-intro-container {
+    max-width: 760px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .home-intro-text h2 {
+    
+  }
+
+  .home-intro-text p {
+    
+  }
+
+  .intro-btns {
+    grid-column: 1/2;
+    grid-row: 2/2;
+    margin-top: -50px;
+    display: flex;
+  }
+
+  .intro-btns a {
+    padding-left: 0;
+    
+  }
+
+  home-intro-image-stack {
+
+  }
+
+  .image-top {
+    
+
+  }
+
+  .image-bottom {
+    
+  }
+
+ 
 }
   
-@media (min-width: 769px) {
-  /* Show desktop nav, hide mobile */
-  .nav-links {
+@media (min-width:1024px) {
+    .nav-links {
     display: flex !important;
     flex-direction: row;
     gap: 2rem;
@@ -509,36 +581,15 @@ home-intro-image-stack {
     font-optical-sizing: auto;
     font-weight: 600;
     font-style: normal;
-    font-size: 20px;
-    letter-spacing: 2px;
+    font-size: 22px;
+    letter-spacing: 1px;
   }
   
   .nav-links a:hover {
     color: rgb(151, 150, 150);
   }
 
-  .label {
-    display: inline-flex;
-    align-items: center;
-    color: white;
-    font-weight: bold;
-    font-size: 26px;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: 600;
-    font-style: normal;
-    font-family: "Alumni Sans SC", sans-serif;
+  .nav-links a {
+    font-size: 22px;
   }
-
-  .label:hover {
-    text-decoration: underline;
-  }
-  .icon {
-    font-size: 1.5rem;
-    margin-right: 13px;
-  }
-}
-  
-@media (min-width:1024px) {
-  
 }
