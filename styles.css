@@ -269,6 +269,76 @@ home-intro-image-stack {
   position: relative;
 }
 
+/* HOME SLIDESHOW*/
+
+#homeslide-section {
+  background-color: #F3F0ED;
+  padding: 20px 20px;
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+#homeslide-section h3 {
+  font-family: "Alumni Sans SC", sans-serif; 
+  font-size: 22px;
+  letter-spacing: 1px;
+  font-style: italic;
+  color: #817460;
+  font-weight: 500;
+}
+
+#homeslide-section h2 {
+  font-family: "Alumni Sans SC", sans-serif; 
+  font-size: 35px;
+  font-weight: 600;
+}
+
+#homeslide-section p {
+  font-family: "Inter", sans-serif;
+  font-size: 19px;
+  margin-left: 10px;
+  margin-top: 7px;
+}
+
+.slideshowContainer {
+  position: relative;
+  max-width: 100%;
+
+}
+
+.cycle-slideshow img {
+  width: 70%;
+  
+}
+
+.prev, .next {
+
+  background: #9b876cd1 ;
+  color: white;
+  padding: 10px 15px;
+  font-size: 1rem;
+  text-decoration: none;
+  border-radius: 50%;
+  z-index: 100;
+  cursor: pointer;
+}
+
+.prev:hover, .next:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+  position: relative;
+}
+
+.next {
+  position: relative;
+}
+
+
+
+
 /*FLOORPLANS HERO IMAGE*/
 .fp-hero::before {
   content: "";
