@@ -6,7 +6,7 @@
 }
   
 html, body {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   overflow-x: hidden;
 }
@@ -212,7 +212,7 @@ main {
 .home-intro-container {
   display: grid;
   grid-template-columns: 1fr;
-  max-width: 350px;
+  max-width: 100%;
   margin-top: 20px;
   margin-left: 20px;
   margin-right: 20px;
@@ -236,16 +236,20 @@ main {
   display: grid;
   grid-template-columns: 1fr;
   gap: 15px;
+  
 }
 
+.intro-btns a {
+  justify-items: center;
+}
 .intro-btns a:first-child {
   font-size: 18px;
-  padding-left: 105px;
+
 }
 
 .intro-btns a:last-child {
   font-size: 18px;
-  padding-left: 112px;
+  
 }
 
 home-intro-image-stack {
@@ -302,14 +306,16 @@ home-intro-image-stack {
 }
 
 .slideshowContainer {
+ 
   position: relative;
   max-width: 100%;
 
 }
 
 .cycle-slideshow img {
-  width: 70%;
-  
+  width: 100%;
+  position: block;
+  border-radius: 3px;
 }
 
 .prev, .next {
@@ -578,7 +584,7 @@ home-intro-image-stack {
   }
 
     .home-intro-container {
-    max-width: 760px;
+    max-width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
@@ -594,12 +600,11 @@ home-intro-image-stack {
   .intro-btns {
     grid-column: 1/2;
     grid-row: 2/2;
-    margin-top: -50px;
-    display: flex;
+    display: grid;
   }
 
   .intro-btns a {
-    padding-left: 0;
+   
     
   }
 
