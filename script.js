@@ -22,3 +22,30 @@ closeMenu.addEventListener('click', () => {
     mobileMenu.classList.remove('active');
   }, 400); // Match your CSS transition duration
 });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const currentPage = window.location.pathname.split("/").pop(); // e.g. 'floorplans.html'
+
+  const allLinks = document.querySelectorAll(".nav-links a, .mobile-nav-links a");
+
+  allLinks.forEach(link => {
+    const linkPage = link.getAttribute("href");
+    if (linkPage === currentPage) {
+      link.classList.add("active");
+    }
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const img = document.querySelector(".parallax-img");
+
+  if (!img) return;
+
+  window.addEventListener("scroll", function () {
+    const offset = window.scrollY * 0.1; // adjust for intensity
+    img.style.transform = `translateY(${offset}px)`;
+  });
+});
+
+

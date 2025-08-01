@@ -1,73 +1,570 @@
 /* Reset & base styles */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
   
 html, body {
-    width: 100%;
-    overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+  
+main {
+  max-width: 1200px;
+}
+
+
+.info-bar .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+  
+/* Header container */
+.main-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+  
+/* Top nav bar */
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000;
+  padding: 1rem 2rem;
+  width: 100%;
+}
+  
+.logo img {
+  height: 50px;
+}
+  
+.nav-links a.active,
+.mobile-nav-links a.active {
+  color: #9B876C; /* <-- change to your highlight color */
+  font-weight: bold;
+}
+
+
+
+
+
+/* Info/contact bar */
+.info-bar {
+  background-color: #9B876C;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: .7rem;
+  color: white;
+}
+  
+.info-link {
+  text-decoration: none;
+}
+
+.info-link:nth-child(2) {
+  margin-left: 55px;
+  margin-right: 55px;
+}
+
+.icon {
+  font-size: 1.5rem;
+  
+}
+
+.label {
+  display: none;
+}
+
+/* Mobile hamburger menu */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+  
+/* Fullscreen mobile menu */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 1001;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  /* Animation start state */
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.mobile-menu.active {
+  pointer-events: auto;
+}
+
+  
+.mobile-menu.active {
+  display: flex;
+}
+  
+.close-menu {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+  
+.mobile-nav-links ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+  
+.mobile-nav-links li {
+  margin: 1rem 0;
+}
+  
+.mobile-nav-links a {
+  color: white;
+  font-size: 1.85rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-family: "Alumni Sans SC", sans-serif;
+}
+  
+.mobile-nav-links a:hover {
+  text-decoration: underline;
+}
+
+
+
+/*HOME HERO IMAGE*/
+.hero {
+  position: relative;
+  background-image: url('images/Northwest_View_Building.png'); /* Replace with actual image path */
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+  
+.hero-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.7); /* semi-transparent black */
+  padding: 40px 100px;
+  text-align: center;
+  color: white;
+  width: 90%;
+  max-width: 500px;
+}
+  
+.hero-overlay h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: 1.2;
+  margin: 0;
+  font-family: "Alumni Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+  
+.hero-overlay p {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #9B876C; 
+  font-family: "Alumni Sans SC", sans-serif; 
+  font-weight: 600;
+  font-style: italic;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+/*END HOME HERO IMAGE*/
+
+/*HOME INTRO*/
+.home-intro-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 350px;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.home-intro-text h2 {
+  font-family: "Alumni Sans SC", sans-serif; 
+  font-weight: 600;
+  font-size: 36px;
+}
+
+.home-intro-text p {
+  margin-top: 10px;
+  font-family: "Inter", sans-serif;
+  font-size: 19px;
+  margin-left: 10px;
+}
+
+.intro-btns {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+
+.intro-btns a:first-child {
+  font-size: 18px;
+  padding-left: 105px;
+}
+
+.intro-btns a:last-child {
+  font-size: 18px;
+  padding-left: 112px;
+}
+
+home-intro-image-stack {
+  display: grid;
+  position: relative;
+}
+
+ .image-top {
+  width: 50%;
+  top: 30px;
+  left: 10px;
+  z-index: 1;
+  position: relative; 
+  box-shadow: 10px 10px #9b876cc0 ;
+
+}
+
+.image-bottom {
+  width: 80%;
+  margin-left: 70px;
+  position: relative;
+}
+
+/*FLOORPLANS HERO IMAGE*/
+.fp-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+  z-index: 1;
+}
+
+.fp-hero > * {
+  position: relative;
+  z-index: 2; /* So your text stays above the overlay */
+}
+
+.fp-hero {
+  position: relative;
+  background-image: url('images/fp_hero.jpeg'); /* Replace with actual image path */
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fp-hero-container {
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 35px;
+  font-family: "Alumni Sans", sans-serif;
+}
+/*END FLOORPLAN HERO IMAGE*/
+
+/*FLOORPLAN INTRO DIV*/
+
+.parallax-img {
+  will-change: transform;
+  transition: transform 0.1s ease-out;
+}
+
+
+/*END FlOORPLAN INTRO DIV*/
+
+/*LIFESTYLE HERO IMAGE*/
+.lifestyle-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+  z-index: 1;
+}
+
+.lifestyle-hero > * {
+  position: relative;
+  z-index: 2; /* So your text stays above the overlay */
+}
+
+.lifestyle-hero {
+  position: relative;
+  background-image: url('images/Courtyard_1.png'); /* Replace with actual image path */
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lifestyle-hero-container {
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 35px;
+  font-family: "Alumni Sans", sans-serif;
+}
+/*END LIFESTYLE HERO IMAGE*/
+
+
+
+/*COMMUNITY HERO IMAGE*/
+.community-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+  z-index: 1;
+}
+
+.community-hero > * {
+  position: relative;
+  z-index: 2; /* So your text stays above the overlay */
+}
+
+.community-hero {
+  position: relative;
+  background-image: url('images/downtown-op.jpg'); /* Replace with actual image path */
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.community-hero-container {
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 35px;
+  font-family: "Alumni Sans", sans-serif;
+}
+/*END COMMUNITY HERO IMAGE*/
+
+/*CONTACT US HERO IMAGE*/
+.contact-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+  z-index: 1;
+}
+
+.contact-hero > * {
+  position: relative;
+  z-index: 2; /* So your text stays above the overlay */
+}
+
+.contact-hero {
+  position: relative;
+  background-image: url('images/Courtyard_2.png'); /* Replace with actual image path */
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-hero-container {
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 35px;
+  font-family: "Alumni Sans", sans-serif;
+}
+/*END CONTACT US HERO IMAGE*/
+
+.btn {
+  padding: .8rem 1.5rem;
+  font-size: .7rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: "Inter", sans-serif;
   }
   
-img {
-    max-width: 100%;
-    height: auto;
+.btn.primary {
+  background-color: #9B876C;
+  color: white;
+  border: none;
+}
+  
+.btn.outline {
+  border: 2px solid black;
+  background: transparent;
+  color: black;
+}
+  
+
+  
+@keyframes menuFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+  
+
+/* Responsive behavior */
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+  
+    .menu-toggle {
     display: block;
   }
-  .intro-image-container {
-    width: 100%;
-    max-width: 100%;
+}
+
+
+@media (min-width: 768px) {
+   .nav-links {
+    display: none;
   }
   
-  
-  body {
-    font-family: Arial, sans-serif;
-    background-color: white;
-  }
-  
-  .container {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 1rem;
-    width: 100%;
+    .menu-toggle {
+    display: block;
   }
 
-  .info-bar .container {
-    display: flex;
-    justify-content: center;
+  .label {
+    display: inline-flex;
     align-items: center;
+    color: white;
+    font-weight: bold;
+    font-size: 26px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-style: normal;
+    font-family: "Alumni Sans SC", sans-serif;
+  }
+
+  .label:hover {
+    text-decoration: underline;
+  }
+  .icon {
+    font-size: 1.5rem;
+    margin-right: 13px;
+  }
+
+    .home-intro-container {
+    max-width: 760px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .home-intro-text h2 {
+    
+  }
+
+  .home-intro-text p {
+    
+  }
+
+  .intro-btns {
+    grid-column: 1/2;
+    grid-row: 2/2;
+    margin-top: -50px;
+    display: flex;
+  }
+
+  .intro-btns a {
+    padding-left: 0;
+    
+  }
+
+  home-intro-image-stack {
+
+  }
+
+  .image-top {
+    
+
+  }
+
+  .image-bottom {
+    
+  }
+
+ 
+}
+  
+@media (min-width:1024px) {
+    .nav-links {
+    display: flex !important;
+    flex-direction: row;
     gap: 2rem;
   }
 
-  .top-nav .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  .menu-toggle,
+  .mobile-menu {
+    display: none !important;
   }
-  
-  /* Header container */
-  .main-header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-  }
-  
-  /* Top nav bar */
-  .top-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #000;
-    padding: 1rem 2rem;
-    width: 100%;
-  }
-  
-  .logo img {
-    height: 50px;
 
-  }
-  
+  .info-link {
+    font-size: 20px;
+  }  
+
   .nav-links ul {
     display: flex;
     list-style: none;
@@ -85,302 +582,14 @@ img {
     font-weight: 600;
     font-style: normal;
     font-size: 22px;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
   }
   
   .nav-links a:hover {
-    text-decoration: underline;
+    color: rgb(151, 150, 150);
   }
-  
-  /* Info/contact bar */
-  .info-bar {
-    background-color: #9B876C;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    padding: 1rem;
-    color: white;
+
+  .nav-links a {
+    font-size: 22px;
   }
-  
-  .info-link {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: white;
-    font-weight: bold;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-family: "Inter", sans-serif;
-    font-weight: 600;
-    font-style: normal;
-  }
-  
-  .info-link:hover {
-    text-decoration: underline;
-  }
-  
-  /* Mobile hamburger menu */
-  .menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 2rem;
-    color: white;
-    cursor: pointer;
-  }
-  
-  /* Fullscreen mobile menu */
-  .mobile-menu {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #000;
-    z-index: 1001;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-      /* Animation start state */
-    opacity: 0;
-    transform: translateY(20px);
-    pointer-events: none;
-    transition: opacity 0.4s ease, transform 0.4s ease;
 }
-
-.mobile-menu.active {
-  pointer-events: auto;
-}
-
-  
-  .mobile-menu.active {
-    display: flex;
-  }
-  
-  .close-menu {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    background: none;
-    border: none;
-    font-size: 2rem;
-    color: white;
-    cursor: pointer;
-  }
-  
-  .mobile-nav-links ul {
-    list-style: none;
-    text-align: center;
-  }
-  
-  .mobile-nav-links li {
-    margin: 1rem 0;
-  }
-  
-  .mobile-nav-links a {
-    color: white;
-    font-size: 1.25rem;
-    text-transform: uppercase;
-    font-weight: bold;
-    text-decoration: none;
-    letter-spacing: 2px;
-  }
-  
-  .mobile-nav-links a:hover {
-    text-decoration: underline;
-  }
-
-  .hero {
-    position: relative;
-    background-image: url('images/Northwest_View_Building.png'); /* Replace with actual image path */
-    background-size: cover;
-    background-position: center;
-    height: 500px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .hero-overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.7); /* semi-transparent black */
-    padding: 40px 100px;
-    text-align: center;
-    color: white;
-    width: 90%;
-    max-width: 500px;
-  }
-  
-  .hero-overlay h1 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    line-height: 1.2;
-    margin: 0;
-    font-family: "Alumni Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-  .hero-overlay p {
-    margin-top: 10px;
-    font-size: 1.2rem;
-    color: #9B876C; 
-    font-family: "Alumni Sans SC", sans-serif; 
-    font-weight: 600;
-    font-style: italic;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-  }
-  
-  .intro {
-    background-color: #fdfdfd;
-    padding-top: 1.8rem
-  }
-  
-  .intro-container {
-    max-width: 280px;   
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 1rem;
-  }
-  
-  .intro-text {
-    flex: 1;
-    max-width: 280px;
-  }
-  
-  .intro-text h2 {
-    font-size: 30px;
-    width: 300px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 1rem;
-    font-family: "Alumni Sans SC", sans-serif; 
-  }
-  
-  .intro-text p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: #333;
-    margin-bottom: 2rem;
-    font-family: "Inter", sans-serif;
-    width: 300px;
-  }
-  
-  .intro-buttons {
-    display: flex;
-    gap: 1rem;
-  }
-  
-  .btn {
-    padding: .8rem 1.5rem;
-    font-size: .7rem;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: 600;
-    font-family: "Inter", sans-serif;
-  }
-  
-  .btn.primary {
-    background-color: #9B876C;
-    color: white;
-    border: none;
-  }
-  
-  .btn.outline {
-    border: 2px solid black;
-    background: transparent;
-    color: black;
-  }
-  
-  .intro-images {
-    position: relative;
-    flex: 1;
-    margin-top: 10px;
-    margin-left: 60px;
-    display: flex;
-    align-items: flex-start;
-  }
-  
-  .image-top {
-    width: 70%;
-    z-index: 2;
-    position: absolute;
-    left: -65px;
-    
-  }
-  
-  .image-bottom {
-    width: 130%;
-    margin-top: 80px;
-  }
-  
-  @keyframes menuFadeIn {
-    0% {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  
-  /* Responsive behavior */
-  
-  @media (max-width: 768px) {
-    .nav-links {
-      display: none;
-    }
-  
-    .menu-toggle {
-      display: block;
-    }
-
-    .info-link {
-        font-size: 14px;
-    }
-
-  }
-  
-  @media (min-width: 769px) {
-    .mobile-menu,
-    .menu-toggle {
-      display: none;
-    }
-
-    .intro-container {
-      max-width: 769px;
-    }
-  }
-  
-  @media (min-width:1024px) {
-    .intro-container {
-      max-width: 1000px;
-      margin-left: 30px;
-    }
-
-    .image-top {
-      width: 50%;
-      margin-left: 70px;
-    }
-
-    .image-bottom {
-      width: 75%;
-      margin-left: 130px;
-    }
-    .logo img {
-        margin-left: -0px;
-    }
-  }
