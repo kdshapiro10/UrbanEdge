@@ -56,7 +56,6 @@ html, body {
 
 
 
-
 /* Info/contact bar */
 .info-bar {
   background-color: #9B876C;
@@ -225,14 +224,17 @@ html, body {
 .home-intro-text h2 {
   font-family: "Alumni Sans SC", sans-serif; 
   font-weight: 600;
-  font-size: 36px;
+  font-size: 30px;
+
 }
 
 .home-intro-text p {
   margin-top: 10px;
   font-family: "Inter", sans-serif;
-  font-size: 19px;
-  margin-left: 10px;
+  font-size: 18px;
+  margin-left: 17px;
+  margin-right: 20px;
+  color: rgb(117, 116, 116);
 }
 
 .intro-btns {
@@ -307,7 +309,7 @@ home-intro-image-stack {
 
 #homeslide-section {
   background-color: #F3F0ED;
-  padding: 20px 20px;
+  padding: 20px 10px;
   margin-top: 30px;
   display: grid;
   grid-template-columns: 1fr;
@@ -316,11 +318,16 @@ home-intro-image-stack {
 
 #homeslide-text {
   margin-top: 15px;
-  margin-left: 15px;
 
 }
 
-#homeslide-section h3 {
+#homeslide-text h2 {
+  font-family: "Alumni Sans SC", sans-serif; 
+  font-weight: 600;
+  font-size: 30px;
+}
+
+#homeslide-text h3 {
   font-family: "Alumni Sans SC", sans-serif; 
   font-size: 22px;
   letter-spacing: 1px;
@@ -329,18 +336,21 @@ home-intro-image-stack {
   font-weight: 500;
 }
 
-#homeslide-section h2 {
-   font-family: "Inter", sans-serif;
-  font-size: 30px;
-  font-weight: 400;
-  text-transform: uppercase;
-}
+
 
 #homeslide-section p {
+  margin-top: 10px;
   font-family: "Inter", sans-serif;
-  font-size: 19px;
-  margin-top: 7px;
-  margin-right: 15px;
+  font-size: 18px;
+  margin-left: 17px;
+  margin-right: 20px;
+  color: rgb(117, 116, 116);
+}
+
+.amenitiesbtn {
+  background-color: #9B876C;
+  color: white;
+  margin-top: 20px;
 }
 
 .slideshowContainer {
@@ -634,7 +644,24 @@ home-intro-image-stack {
     margin-left: -20px;/* left align */
   }
 
+  #homeslide-text {
+    margin-left: 15px;
+  }
 
+  #homeslide-text h2 {
+    font-size: 27px;
+
+  }
+
+  #homeslide-text p {
+    margin-top: 25px;
+  }
+
+  .amenitiesbtn {
+    width: 250px;
+    margin-left: 210px;
+    margin-top: 35px;
+  }
 
 
 }
@@ -684,7 +711,7 @@ home-intro-image-stack {
   }
 
   .home-intro-text {
-    width: 420px;
+    width: 450px;
     gap: 50px;
   }
 
