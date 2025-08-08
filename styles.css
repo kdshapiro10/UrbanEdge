@@ -56,7 +56,6 @@ html, body {
 
 
 
-
 /* Info/contact bar */
 .info-bar {
   background-color: #9B876C;
@@ -213,46 +212,76 @@ html, body {
 /*HOME INTRO*/
 .home-intro-container {
   display: grid;
-  grid-template-columns: 1fr;
-  max-width: 100%;
-  margin-top: 20px;
-  margin-left: 20px;
-  margin-right: 20px;
+  grid-template-columns: 1fr; /* mobile: one column */
+  gap: 30px;
+  max-width: 1400px; /* stop growing past 1400px */
+  margin: 0 auto; /* center horizontally */
+  padding: 40px 20px; /* spacing on mobile and edges */
+  align-items: center;
 }
 
 
 .home-intro-text h2 {
   font-family: "Alumni Sans SC", sans-serif; 
   font-weight: 600;
-  font-size: 36px;
+  font-size: 30px;
+
 }
 
 .home-intro-text p {
   margin-top: 10px;
   font-family: "Inter", sans-serif;
-  font-size: 19px;
-  margin-left: 10px;
+  font-size: 18px;
+  margin-left: 17px;
+  margin-right: 20px;
+  color: rgb(117, 116, 116);
 }
 
 .intro-btns {
-  margin-top: 30px;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 15px;
-  
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* space between buttons */
+  padding: 0 10px;
+  margin-top: 25px;
 }
 
-.intro-btns a {
-  justify-items: center;
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px;
+  font-size: 27px;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+  font-family: "Alumni Sans SC", sans-serif;
+  transition: 0.3s ease;
 }
-.intro-btns a:first-child {
-  font-size: 18px;
 
+/* Primary (filled) button */
+.btn-primary {
+  background-color: #9B876C;
+  color: white;
+  border: 2px solid #9B876C;
 }
 
-.intro-btns a:last-child {
-  font-size: 18px;
-  
+.btn-primary:hover {
+  background-color: #555;
+}
+
+/* Outline (secondary) button */
+.btn-outline {
+  background-color: transparent;
+  color: #000;
+  border: 3px solid #9B876C;
+}
+
+.btn-outline:hover {
+  background-color: #333;
+  color: white;
 }
 
 home-intro-image-stack {
@@ -280,7 +309,7 @@ home-intro-image-stack {
 
 #homeslide-section {
   background-color: #F3F0ED;
-  padding: 20px 20px;
+  padding: 20px 10px;
   margin-top: 30px;
   display: grid;
   grid-template-columns: 1fr;
@@ -288,12 +317,17 @@ home-intro-image-stack {
 }
 
 #homeslide-text {
-  margin-top: 50px;
-  margin-left: 15px;
+  margin-top: 15px;
 
 }
 
-#homeslide-section h3 {
+#homeslide-text h2 {
+  font-family: "Alumni Sans SC", sans-serif; 
+  font-weight: 600;
+  font-size: 30px;
+}
+
+#homeslide-text h3 {
   font-family: "Alumni Sans SC", sans-serif; 
   font-size: 22px;
   letter-spacing: 1px;
@@ -302,60 +336,68 @@ home-intro-image-stack {
   font-weight: 500;
 }
 
-#homeslide-section h2 {
-   font-family: "Inter", sans-serif;
-  font-size: 30px;
-  font-weight: 400;
-  text-transform: uppercase;
-}
+
 
 #homeslide-section p {
+  margin-top: 10px;
   font-family: "Inter", sans-serif;
-  font-size: 19px;
-  margin-top: 7px;
-  margin-right: 15px;
+  font-size: 18px;
+  margin-left: 17px;
+  margin-right: 20px;
+  color: rgb(117, 116, 116);
+}
+
+.amenitiesbtn {
+  background-color: #9B876C;
+  color: white;
+  margin-top: 20px;
 }
 
 .slideshowContainer {
- 
   position: relative;
-  max-width: 100%;
-
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+  overflow: hidden;
+  margin-top: 20px;
 }
 
-.cycle-slideshow img {
-  width: 90%;
-  position: relative;
-  border-radius: 3px;
-  margin-top: 10px;
-  margin-left: 15px;
+.slideshowContainer img {
+  width: 100%;
+  display: block;
 }
 
 .prev, .next {
-
-  background: #9b876cd1 ;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #9b876cb9;
   color: white;
   padding: 10px 15px;
-  font-size: 1rem;
   text-decoration: none;
+  font-size: 1.5rem;
   border-radius: 50%;
-  z-index: 100;
+  z-index: 999; /* ensures buttons are always above fading images */
   cursor: pointer;
+  user-select: none;
+  transition: background 0.3s ease;
 }
 
 .prev:hover, .next:hover {
-  background: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .prev {
-  position: relative;
+  left: 5px;
 }
 
 .next {
-  position: relative;
+  right: 5px;
 }
 
-
+.round {
+  border-radius: 50%;
+}
 
 
 /*FLOORPLANS HERO IMAGE*/
@@ -518,27 +560,7 @@ home-intro-image-stack {
 }
 /*END CONTACT US HERO IMAGE*/
 
-.btn {
-  padding: .8rem 1.5rem;
-  font-size: .7rem;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-weight: 600;
-  font-family: "Inter", sans-serif;
-  }
-  
-.btn.primary {
-  background-color: #9B876C;
-  color: white;
-  border: none;
-}
-  
-.btn.outline {
-  border: 2px solid black;
-  background: transparent;
-  color: black;
-}
-  
+
 
   
 @keyframes menuFadeIn {
@@ -596,47 +618,52 @@ home-intro-image-stack {
     margin-right: 13px;
   }
 
-    .home-intro-container {
-    max-width: 1400px;
-    display: grid;
-    grid-template-columns: 1fr 1fr ;
+  .home-intro-container {
+      grid-template-columns: 1fr 1fr; /* text left, images right */
   }
 
+  /* Intro text section */
   .home-intro-text {
-    height: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 310px;
+    margin-left: 30px;
   }
 
-  .home-intro-text p {
-    
+  .home-intro-text h2 {
+    font-size: 27px;
   }
 
+  /* Buttons container */
   .intro-btns {
     display: flex;
-    max-width: 400px;
-    margin-top: 100px;
-    margin-left: 100px;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: flex-start; 
+    margin-left: -20px;/* left align */
   }
 
-  .intro-btns a {
-   
-    
+  #homeslide-text {
+    margin-left: 15px;
   }
 
-  home-intro-image-stack {
-
-  }
-
-  .image-top {
-    
+  #homeslide-text h2 {
+    font-size: 27px;
 
   }
 
-  .image-bottom {
-    
+  #homeslide-text p {
+    margin-top: 25px;
+  }
+
+  .amenitiesbtn {
+    width: 250px;
+    margin-left: 210px;
+    margin-top: 35px;
   }
 
 
-  
 }
   
 @media (min-width:1024px) {
@@ -681,5 +708,14 @@ home-intro-image-stack {
 
   .nav-links a {
     font-size: 22px;
+  }
+
+  .home-intro-text {
+    width: 450px;
+    gap: 50px;
+  }
+
+  .home-intro-text h2 {
+    font-size: 40px;
   }
 }
