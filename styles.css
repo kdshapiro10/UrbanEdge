@@ -225,7 +225,8 @@ html, body {
   font-family: "Alumni Sans SC", sans-serif; 
   font-weight: 600;
   font-size: 27px;
-
+  margin-bottom: 20px;
+  text-transform: uppercase;
 }
 
 .home-intro-text p {
@@ -276,12 +277,13 @@ html, body {
 .btn-outline {
   background-color: transparent;
   color: #000;
-  border: 3px solid #9B876C;
+  border: 1.5px solid #151515;
 }
 
 .btn-outline:hover {
-  background-color: #333;
+  background-color: #555;
   color: white;
+  border: 2px solid #9B876C;
 }
 
 home-intro-image-stack {
@@ -325,6 +327,8 @@ home-intro-image-stack {
   font-family: "Alumni Sans SC", sans-serif; 
   font-weight: 600;
   font-size: 27px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
 }
 
 #homeslide-text h3 {
@@ -344,6 +348,7 @@ home-intro-image-stack {
   font-family: "Inter", sans-serif;
   font-size: 18px;
   margin-left: 17px;
+  margin-bottom: 20px;
   margin-right: 20px;
   color: rgb(117, 116, 116);
 }
@@ -354,6 +359,8 @@ home-intro-image-stack {
   margin-top: 20px;
   position: relative;
 }
+
+
 
 .slideshowContainer {
   position: relative;
@@ -401,16 +408,43 @@ home-intro-image-stack {
   border-radius: 50%;
 }
 
-
-
 #home-floorplan {
-  padding: 20px 10px;
-  margin-top: 30px;
-  display: grid;
-  grid-template-columns: 1fr;
+ display: grid;
+  grid-template-columns: 1fr; /* mobile: one column */
+  gap: 30px;
+  max-width: 1400px; /* stop growing past 1400px */
+  margin: 0 auto; /* center horizontally */
+  padding: 40px 30px; /* spacing on mobile and edges */
+  align-items: center;
+}
+
+#home-floorplan img {
   width: 100%;
 }
 
+.homeFpImage {
+  position: relative;
+}
+
+.homeFpImage a {
+  position: absolute;
+  top: 5px;
+}
+
+.homeFpText h2 {
+  margin-bottom: 20px;
+  font-family: "Alumni Sans SC", sans-serif; 
+  font-weight: 600;
+  font-size: 27px;
+  text-transform: uppercase;
+}
+
+.homeFpText p {
+  font-size: 18px; 
+  color: rgb(117, 116, 116);
+  font-family: "Inter", sans-serif;
+  margin-left: 10px;
+}
 
 .floorplanbtn {
   background-color: #9B876C;
@@ -418,9 +452,6 @@ home-intro-image-stack {
   margin-top: 20px;
   position: relative;
 }
-
-
-
 
 /*FLOORPLANS HERO IMAGE*/
 .fp-hero::before {
@@ -690,9 +721,49 @@ home-intro-image-stack {
     position: relative;
   }
 
-  
- 
- 
+  #home-floorplan {
+    grid-template-columns:  1fr 1fr;
+    gap: 40px;
+  }
+
+  .homeFpText {
+    display: grid;
+    gap: 20px;
+    margin-top: 10px;
+  }
+
+  .homeFpText h2 {
+   font-size: 31px;
+  }
+
+  .homeFpImage {
+    grid-column: 2/4;
+    position: relative;
+    display:inline-block;
+  }
+
+  .homeFpImage img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .homeFpImage a {
+    position: absolute;
+    top: 20px; /* distance from bottom */
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+  } 
+
+
+  #home-floorplan p {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    font-family: "Inter", sans-serif;
+    color: rgb(117, 116, 116);
+    font-size: 18px;
+  }
 
 }
   
@@ -760,15 +831,19 @@ home-intro-image-stack {
   .amenitiesbtn {
     left: 130px;
   }
+
+  .homeFpText h2 {
+    font-size: 35px;
+  }
 }
 
 @media (min-width: 1400px) {
   .home-intro-text h2 {
-    font-size: 40px;
+    font-size: 35px;
   }
 
   #homeslide-text h2 {
-    font-size: 40px;
+    font-size: 35px;
   }
 
    .home-intro-text p {
