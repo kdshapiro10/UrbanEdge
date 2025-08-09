@@ -380,12 +380,12 @@ home-intro-image-stack {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: #9b876cb9;
+  background-color: #2d2d2cb9;
   color: white;
   padding: 10px 15px;
   text-decoration: none;
   font-size: 1.5rem;
-  border-radius: 50%;
+  border-radius: 70%;
   z-index: 999; /* ensures buttons are always above fading images */
   cursor: pointer;
   user-select: none;
@@ -405,7 +405,7 @@ home-intro-image-stack {
 }
 
 .round {
-  border-radius: 50%;
+  border-radius: 70%;
 }
 
 #home-floorplan {
@@ -452,6 +452,19 @@ home-intro-image-stack {
   margin-top: 20px;
   position: relative;
 }
+
+.fpbtn-primary {
+  background-color: transparent;
+  color:black;
+  border: 2px solid #9B876C;
+  margin-top: 20px;
+}
+
+.fpbtn-primary:hover {
+  background-color: #555;
+  color: white;
+}
+
 
 /*FLOORPLANS HERO IMAGE*/
 .fp-hero::before {
@@ -721,6 +734,11 @@ home-intro-image-stack {
     position: relative;
   }
 
+  .amenitiesbtn:hover {
+    background-color:#555;
+    border: 2px solid #9B876C;
+  }
+
   #home-floorplan {
     grid-template-columns:  1fr 1fr;
     gap: 40px;
@@ -763,6 +781,11 @@ home-intro-image-stack {
     font-family: "Inter", sans-serif;
     color: rgb(117, 116, 116);
     font-size: 18px;
+  }
+
+  .fpbtn-primary {
+    width: 40%; 
+    margin-left: 150px;
   }
 
 }
