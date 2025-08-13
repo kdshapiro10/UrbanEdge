@@ -455,6 +455,10 @@ home-intro-image-stack {
   position: relative;
 }
 
+.floorplanbtn:hover {
+  background-color: #555;;
+}
+
 .fpbtn-primary {
   background-color: transparent;
   color:black;
