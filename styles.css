@@ -480,7 +480,24 @@ home-intro-image-stack {
   margin: 0 auto;
   padding: 20px 30px;
   background-color: #F3F0ED;
+  max-width: 1400px;
+  padding-top: 35px;
 }
+
+.comSectionImg img {
+  width:150px;
+  height: auto;
+  max-width: 100%;
+}
+
+.comSectionImg {
+  display:flex;
+  flex-wrap: wrap;
+  gap:15px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
 
 .comSectionText {
   background-color: white;
@@ -519,6 +536,11 @@ home-intro-image-stack {
   color: white;
   margin-top: 20px;
 }
+
+.comSectionBtn:hover {
+  background-color: #555;
+}
+
 
 /*FLOORPLANS HERO IMAGE*/
 .fp-hero::before {
@@ -838,6 +860,7 @@ home-intro-image-stack {
     width: 70%; 
   }
 
+  
 }
   
 @media (min-width:1024px) {
@@ -910,6 +933,16 @@ home-intro-image-stack {
   }
   .homeFpText h2 {
     font-size: 35px;
+  }
+
+  .community-section {
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+
+  }
+
+  .comSectionImg img{
+    width: 40%;
   }
 }
 
