@@ -471,6 +471,54 @@ home-intro-image-stack {
   color: white;
 }
 
+.community-section {
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  display:grid;
+  grid-template-columns: 1fr;
+  margin: 0 auto;
+  padding: 20px 30px;
+  background-color: #F3F0ED;
+}
+
+.comSectionText {
+  background-color: white;
+  box-shadow: -1px 6px 20px #595959a7;
+  padding: 20px;
+}
+
+.comSectionText h3 {
+  font-family: "Alumni Sans SC", sans-serif; 
+  font-size: 20px;
+  letter-spacing: 1px;
+  font-style: italic;
+  color: #817460;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.comSectionText h2 {
+  font-family: "Alumni Sans SC", sans-serif; 
+  font-weight: 600;
+  font-size: 27px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.comSectionText p {
+  font-size: 18px; 
+  color: rgb(117, 116, 116);
+  font-family: "Inter", sans-serif;
+  margin-left: 10px;
+}
+
+.comSectionBtn {
+  background-color: #9B876C;
+  color: white;
+  margin-top: 20px;
+}
 
 /*FLOORPLANS HERO IMAGE*/
 .fp-hero::before {
