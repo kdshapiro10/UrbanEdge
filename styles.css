@@ -1,3 +1,25 @@
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity .6s ease, transform .6s ease;
+  will-change: opacity, transform;
+}
+
+.reveal.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+
+
 /* Reset & base styles */
 * {
   box-sizing: border-box;
@@ -480,14 +502,13 @@ home-intro-image-stack {
   margin: 0 auto;
   padding: 20px 30px;
   background-color: #F3F0ED;
-  max-width: 1400px;
+  width: 100%;
   padding-top: 35px;
 }
 
 .comSectionImg img {
   width:150px;
   height: auto;
-  max-width: 100%;
 }
 
 .comSectionImg {
@@ -496,6 +517,7 @@ home-intro-image-stack {
   gap:15px;
   justify-content: center;
   margin-bottom: 20px;
+  max-width: 650px;
 }
 
 
@@ -503,6 +525,7 @@ home-intro-image-stack {
   background-color: white;
   box-shadow: -1px 6px 20px #595959a7;
   padding: 20px;
+  max-width: 670px;
 }
 
 .comSectionText h3 {
@@ -938,7 +961,6 @@ home-intro-image-stack {
   .community-section {
     grid-template-columns: 1fr 1fr;
     gap: 5px;
-
   }
 
   .comSectionImg img{
