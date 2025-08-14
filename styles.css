@@ -2,8 +2,8 @@
 /*FADE IN AFFECT WHEN PAGE LOADS*/
 .reveal {
   opacity: 0;
-  transform: translateY(12px);
-  transition: opacity .6s ease, transform .6s ease;
+  transform: translateY(22px);
+  transition: opacity .9s ease, transform .9s ease;
   will-change: opacity, transform;
 }
 
@@ -28,6 +28,7 @@
 section {
   overflow: hidden;
 }
+
 /*END FADE IN AFFECT*/
 
 /* Reset & base styles */
@@ -738,8 +739,16 @@ home-intro-image-stack {
 }
 /*END CONTACT US HERO IMAGE*/
 
+footer {
+  background-color: #000;
+  color: white;
+ display: flex;
+ flex-direction: column;
+}
 
-
+.logo-footer img {
+  width: 150px; 
+}
   
 @keyframes menuFadeIn {
   0% {
