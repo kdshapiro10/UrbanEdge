@@ -2,7 +2,7 @@
 /*FADE IN AFFECT WHEN PAGE LOADS*/
 .reveal {
   opacity: 0;
-  transform: translateY(22px);
+  transform: translateY(30px);
   transition: opacity .9s ease, transform .9s ease;
   will-change: opacity, transform;
 }
