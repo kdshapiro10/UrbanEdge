@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
     'section', 'article',
     'h1','h2','h3','h4','h5','h6',
     'p','img','figure','figcaption',
-    '.card','button','a'
+    '.card','.btn','button','a'
   ].join(',');
 
   const skipWithin = ['header','nav','footer','[data-no-reveal]'].join(',');
@@ -82,4 +82,5 @@ document.addEventListener("DOMContentLoaded", function () {
     candidates.forEach(el => el.classList.add('in-view'));
   }
 })();
+
 

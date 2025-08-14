@@ -1,6 +1,8 @@
+
+/*FADE IN AFFECT WHEN PAGE LOADS*/
 .reveal {
   opacity: 0;
-  transform: translateY(22px);
+  transform: translateY(12px);
   transition: opacity .6s ease, transform .6s ease;
   will-change: opacity, transform;
 }
@@ -18,7 +20,15 @@
   }
 }
 
-
+.hero,
+.home-intro-container,
+#homeslide-section,
+#home-floorplan,
+.comSection-background,
+section {
+  overflow: hidden;
+}
+/*END FADE IN AFFECT*/
 
 /* Reset & base styles */
 * {
@@ -493,6 +503,10 @@ home-intro-image-stack {
   color: white;
 }
 
+.comSection-background {
+  background-color: #F3F0ED;
+}
+
 .community-section {
   position: relative;
   align-items: center;
@@ -501,8 +515,7 @@ home-intro-image-stack {
   grid-template-columns: 1fr;
   margin: 0 auto;
   padding: 20px 30px;
-  background-color: #F3F0ED;
-  width: 100%;
+  max-width: 1400px;
   padding-top: 35px;
 }
 
