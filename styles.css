@@ -748,18 +748,58 @@ home-intro-image-stack {
 }
 /*END CONTACT US HERO IMAGE*/
 
-footer {
-  background-color: #000;
-  color: white;
- display: flex;
- flex-direction: column;
+/*FOOTER STYLES*/
+.site-footer {
+  background: #111;        /* dark footer background */
+  color: #eee;             /* light text */
+  padding: 80px;
+  text-align: left;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
 }
 
-
-
-.logo-footer img {
-  width: 150px; 
+.footer-logo img {
+  max-width: 150px;
+  margin-bottom: 1rem;
 }
+
+.footer-section {
+  margin-bottom: 2rem;
+}
+
+.footer-section h3 {
+  font-size: 28px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 6px;
+  font-family: "Alumni Sans", sans-serif;
+}
+
+.contact-block {
+  font-style: normal; /* removes default italics */
+  line-height: 1.5;
+}
+
+.contact-block a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.contact-block a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.footer-bottom a {
+  color: inherit;
+  text-decoration: underline;
+}
+
   
 @keyframes menuFadeIn {
   0% {
@@ -914,6 +954,11 @@ footer {
 
   .fpbtn-primary {
     width: 70%; 
+  }
+
+  footer {
+    flex-direction: row;
+  
   }
 
   
