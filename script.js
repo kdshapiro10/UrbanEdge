@@ -37,50 +37,5 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  const img = document.querySelector(".parallax-img");
-
-  if (!img) return;
-
-  window.addEventListener("scroll", function () {
-    const offset = window.scrollY * 0.1; // adjust for intensity
-    img.style.transform = `translateY(${offset}px)`;
-  });
-});
-
-(function () {
-  const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (reduceMotion) return;
-
-  // Elements to reveal
-  const selectors = [
-    'section', 'article',
-    'h1','h2','h3','h4','h5','h6',
-    'p','img','figure','figcaption',
-    '.card','.btn','button','a'
-  ].join(',');
-
-  const skipWithin = ['header','nav','footer','[data-no-reveal]'].join(',');
-
-  const candidates = Array.from(document.querySelectorAll(selectors))
-    .filter(el => !el.closest(skipWithin) && !el.hasAttribute('data-no-reveal'));
-
-  candidates.forEach(el => el.classList.add('reveal'));
-
-  if ('IntersectionObserver' in window) {
-    const io = new IntersectionObserver((entries, obs) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('in-view');
-          obs.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.12 });
-
-    candidates.forEach(el => io.observe(el));
-  } else {
-    candidates.forEach(el => el.classList.add('in-view'));
-  }
-})();
 
 

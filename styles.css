@@ -1,35 +1,4 @@
 
-/*FADE IN AFFECT WHEN PAGE LOADS*/
-.reveal {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity .9s ease, transform .9s ease;
-  will-change: opacity, transform;
-}
-
-.reveal.in-view {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .reveal {
-    opacity: 1;
-    transform: none;
-    transition: none;
-  }
-}
-
-.hero,
-.home-intro-container,
-#homeslide-section,
-#home-floorplan,
-.comSection-background,
-section {
-  overflow: hidden;
-}
-
-/*END FADE IN AFFECT*/
 
 /* Reset & base styles */
 * {
@@ -72,9 +41,9 @@ html, body {
   align-items: center;
   background-color: #000;
   padding: 1rem 1rem;
+  position: relative;
   width: 100%;
   top: 0;
-  position: fixed;
   left: 0;
   z-index: 1000;
 }
@@ -90,8 +59,6 @@ html, body {
 }
 
 
-
-
 /* Info/contact bar */
 .info-bar {
   background-color: #9B876C;
@@ -100,8 +67,7 @@ html, body {
   align-items: center;
   padding: .7rem;
   color: white;
-  position: sticky;
-  top: 80px;
+  position: relative;
   left: 0;
   z-index: 999;
   width: 100%;
