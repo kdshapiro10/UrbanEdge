@@ -749,14 +749,21 @@ home-intro-image-stack {
 /*END CONTACT US HERO IMAGE*/
 
 /*FOOTER STYLES*/
-.site-footer {
-  background: #111;        /* dark footer background */
+
+.footer-bg {
+  background-color: #000;
+  width: 100%;
+}
+
+.site-footer {       
   color: #969595;             /* light text */
   padding: 80px;
   text-align: left;
   font-family: sans-serif;
   display: flex;
   flex-direction: column;
+  max-width: 1400px;
+  position: relative;
 }
 
 .footer-logo img {
@@ -783,10 +790,11 @@ home-intro-image-stack {
 .contact-block {
   font-style: normal; /* removes default italics */
   line-height: 1.5;
+  
 }
 
 .contact-block a {
-  color: inherit;
+  color: white;
   text-decoration: none;
 }
 
@@ -964,10 +972,15 @@ home-intro-image-stack {
     width: 70%; 
   }
 
-  footer {
+ .site-footer {
     flex-direction: row;
-  
+    gap: 50px;
   }
+
+  .footer-logo {
+    display: none;
+  }
+
 
   
 }
@@ -1058,6 +1071,10 @@ home-intro-image-stack {
   .comSectionImg img{
     width: 40%;
   }
+
+  .footer-logo {
+    display: inline-block;
+  }
 }
 
 @media (min-width: 1185px) {
@@ -1097,5 +1114,10 @@ home-intro-image-stack {
   }
   .amenitiesbtn {
     left: 300px;
+  }
+
+  .site-footer {
+    justify-content: center;
+    margin: 0 auto;
   }
 }
