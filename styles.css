@@ -182,7 +182,7 @@ html, body {
   
 .hero-overlay {
   position: absolute;
-  top: 60%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: rgba(0, 0, 0, 0.7); /* semi-transparent black */
@@ -478,7 +478,7 @@ home-intro-image-stack {
   color: white;
 }
 
-.comSection-background {
+.sectionBackground {
   background-color: #F3F0ED;
 }
 
@@ -591,14 +591,112 @@ home-intro-image-stack {
 }
 /*END FLOORPLAN HERO IMAGE*/
 
-/*FLOORPLAN INTRO DIV*/
-
-.parallax-img {
-  will-change: transform;
-  transition: transform 0.1s ease-out;
+/*FLOORPLAN INTRO */
+#introFpSection {
+  display: grid;
+  grid-template-columns: 1fr; /* mobile: one column */
+  width: 100%;
+  margin: 0 auto;
+  padding: 30px;
 }
 
+.introFpText h2 {
+  font-family: "Alumni Sans SC", sans-serif; 
+  font-weight: 600;
+  font-size: 27px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
 
+.introFpText p {
+  margin-top: 10px;
+  font-family: "Inter", sans-serif;
+  color: rgb(117, 116, 116);
+  font-size: 18px;
+  margin-left: 17px;
+  margin-right: 20px;
+}
+
+.introFpimg {
+  width: 85%;
+  margin-top: 20px;
+  left: 10px;
+  position: relative; 
+  box-shadow: 10px 10px #9b876cc0 ;
+}
+
+.layouts {
+  display: grid;
+  grid-template-columns:  1fr;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.availabilityBtn {
+  background-color: #9B876C;
+  color: white;
+  margin-top: 20px;
+}
+.layouts  h2{
+  font-family: "Alumni Sans SC", sans-serif; 
+  font-weight: 600;
+  font-size: 27px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.layout-Desc {
+  font-size: 18px; 
+  color: rgb(117, 116, 116);
+  font-family: "Inter", sans-serif;
+  margin-left: 10px;
+}
+
+.features {
+  font-size: 15px;
+  margin-top: 30px;
+}
+
+.floorplan-options {
+  padding: 10px;
+  width: 100%;
+  font-family: Arial, sans-serif;
+ margin-top: 40px;
+}
+
+.floorplan-options h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.floorplan-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-family: "Inter", sans-serif;
+}
+
+.floorplan-table th {
+  font-weight: 500;
+  padding: 12px 0;
+
+  font-size: 15px;
+  border-bottom: 1px solid #d6d4d2;
+}
+
+.floorplan-table td {
+  padding: 12px 0;
+  font-size: 14px;
+  color: #444;
+  border-bottom: 1px solid #d6d4d2;
+}
+
+.layoutImg img{
+  width: 100%;
+  margin-top: 20px;
+}
 /*END FlOORPLAN INTRO DIV*/
 
 /*LIFESTYLE HERO IMAGE*/
