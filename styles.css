@@ -773,6 +773,7 @@ home-intro-image-stack {
   height: 400px;
   display: flex;
   align-items: center;
+  margin-top: 100px;
   justify-content: center;
 }
 
@@ -811,6 +812,7 @@ home-intro-image-stack {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 80px;
 }
 
 .contact-hero-container {
