@@ -178,7 +178,7 @@ html, body {
   background-image: url('images/Northwest_View_Building.png'); /* Replace with actual image path */
   background-size: cover;
   background-position: center;
-  height: 400px;
+  height: 550px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -583,7 +583,7 @@ home-intro-image-stack {
   background-image: url('images/fp_hero.jpeg'); /* Replace with actual image path */
   background-size: cover;
   background-position: center;
-  height: 400px;
+  height: 500px;
   display: flex;
   top: 80px;
   align-items: center;
@@ -731,7 +731,7 @@ home-intro-image-stack {
   background-image: url('images/Courtyard_1.png'); /* Replace with actual image path */
   background-size: cover;
   background-position: center;
-  height: 400px;
+  height: 500px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -771,7 +771,7 @@ home-intro-image-stack {
   background-image: url('images/downtown-op.jpg'); /* Replace with actual image path */
   background-size: cover;
   background-position: center;
-  height: 400px;
+  height: 500px;
   display: flex;
   align-items: center;
   margin-top: 100px;
