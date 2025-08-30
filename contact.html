@@ -69,7 +69,120 @@
     </div>
   </header>
   <main>
+    <div class="form-content">
+        <div class="ue-form-wrap">
+        <h3 class="ue-form-title">Please Email Me The Following:</h3>
 
+        <!-- Replace YOUR_FORM_ID with your real Formspree endpoint -->
+        <form 
+          id="ue-info-form" 
+          action="https://formspree.io/f/YOUR_FORM_ID" 
+          method="POST" 
+          novalidate
+        >
+          <fieldset class="ue-checks" aria-labelledby="request-list">
+            <legend id="request-list" class="sr-only">
+              Choose what to receive by email
+            </legend>
+
+            <label class="ue-check">
+              <input type="checkbox" id="selectAll" />
+              <span class="box"></span>
+              Select All
+            </label>
+
+            <label class="ue-check">
+              <input type="checkbox" name="topics" value="Pricing" />
+              <span class="box"></span>
+              Pricing
+            </label>
+
+            <label class="ue-check">
+              <input type="checkbox" name="topics" value="Floor Plans" />
+              <span class="box"></span>
+              Floor Plans
+            </label>
+
+            <label class="ue-check">
+              <input type="checkbox" name="topics" value="Apartment Images" />
+              <span class="box"></span>
+              Apartment Images
+            </label>
+
+            <label class="ue-check">
+              <input type="checkbox" name="topics" value="Urban Edge Promotions" />
+              <span class="box"></span>
+              Urban Edge Promotions
+            </label>
+
+            <label class="ue-check">
+              <input type="checkbox" name="topics" value="Walkable Hot Spots" />
+              <span class="box"></span>
+              Walkable Hot Spots
+            </label>
+          </fieldset>
+
+          <div class="ue-field" data-required>
+            <label for="name">
+              Name <span class="req">*</span>
+            </label>
+            <input 
+              type="text" 
+              id="name" 
+              name="name" 
+              autocomplete="name" 
+              required 
+            />
+            <p class="err" role="alert">Please enter your name.</p>
+          </div>
+
+          <div class="ue-field" data-required data-type="phone">
+            <label for="phone">
+              Phone <span class="req">*</span>
+            </label>
+            <input 
+              type="tel" 
+              id="phone" 
+              name="phone" 
+              inputmode="tel" 
+              autocomplete="tel" 
+              required 
+            />
+            <p class="err" role="alert">Please enter a valid phone number.</p>
+          </div>
+
+          <div class="ue-field" data-required data-type="email">
+            <label for="email">
+              Email <span class="req">*</span>
+            </label>
+            <input 
+              type="email" 
+              id="email" 
+              name="email" 
+              autocomplete="email" 
+              required 
+            />
+            <p class="err" role="alert">Please enter a valid email.</p>
+          </div>
+
+          <!-- This subject line shows up in Minnette’s email -->
+          <input 
+            type="hidden" 
+            name="_subject" 
+            value="New Request from Urban Edge Website" 
+          />
+
+          <div class="ue-actions">
+            <button type="submit" class="ue-btn">
+              SUBMIT
+            </button>
+          </div>
+
+          <!-- ✅ Toast for success/error messages -->
+          <div id="toast" class="toast" aria-live="polite"></div>
+        </form>
+      </div>
+    </div>
             
   </main>
 
