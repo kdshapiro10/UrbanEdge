@@ -833,6 +833,8 @@ home-intro-image-stack {
 .ue-form-wrap {
   margin: 0 auto;
   width: 85%;
+  margin-bottom: 30px;
+  margin-top: 30px;
 }
 
 .ue-form-title {
