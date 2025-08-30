@@ -824,6 +824,44 @@ home-intro-image-stack {
 /*CONTACT PAGE FORM AND CONTENT*/
 /* Screen-reader only helper used by the legend */
 /* Screen-reader only helper */
+.form-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.contact-text {
+  margin: 20px;
+}
+
+.contact-text h3{
+  font-family: "Alumni Sans SC", sans-serif; 
+  font-size: 20px;
+  letter-spacing: 1px;
+  font-style: italic;
+  color: #817460;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.contact-text h2 {
+  font-family: "Alumni Sans SC", sans-serif; 
+  font-weight: 600;
+  font-size: 27px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.contact-text p {
+  margin-top: 10px;
+  font-family: "Inter", sans-serif;
+  color: rgb(117, 116, 116);
+  font-size: 17px;
+  margin-left: 17px;
+  margin-right: 20px;
+}
+
 .sr-only {
   position: absolute;
   left: -9999px;
@@ -833,16 +871,17 @@ home-intro-image-stack {
   margin: 0 auto;
   width: 85%;
   margin-bottom: 30px;
-  margin-top: 30px;
+  margin-top: 20px;
  
 }
 
 .ue-form-title {
-  font-weight: 700;
+  font-weight: 600;
   font-size: 25px;
   line-height: 1.25;
   margin: 0 0 16px;
   font-family: "Alumni Sans SC", sans-serif; 
+  text-transform: uppercase;
 }
 
 .ue-form-wrap label,
@@ -1313,9 +1352,10 @@ home-intro-image-stack {
     width: 40%;
   }
 
-
-
-
+  .form-content {
+    grid-template-columns: 1fr 1fr;
+    max-width: 900px;
+  }
 
   .footer-logo {
     display: inline-block;
@@ -1359,6 +1399,10 @@ home-intro-image-stack {
   }
   .amenitiesbtn {
     left: 300px;
+  }
+
+  .form-content {
+    max-width: 1280px;
   }
 
   .site-footer {
