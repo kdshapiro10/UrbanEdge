@@ -26,11 +26,11 @@
               <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="floorplans.html">Floorplans</a></li>
-                <li><a href="lifestyle.html">Lifestyle</a></li>
+                <li><a href="index.html#homeslide-section">Amenities</a></li>
                 <li><a href="community.html">Community</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
-                <li><a href="#applicant">Applicant Login</a></li>
-                <li><a href="#resident">Resident Login</a></li>
+                <li><a href="https://www.rentcafe.com/residentservices/apartmentsforrent/userregistration.aspx?source=property_search&propertyid=MjE0NzA2MQ%3d%3d-8EOeI6RCoaw%3d">Applicant Login</a></li>
+                <li><a href="https://urban-edge-llc-rentcafewebsite.securecafenet.com/residentservices/urban-edge-llc/userlogin">Resident Login</a></li>
               </ul>
             </nav>
     </div>
@@ -54,11 +54,11 @@
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="floorplans.html">Floorplans</a></li>
-          <li><a href="lifestyle.html">Lifestyle</a></li>
+          <li><a href="index.html#homeslide-section">Amenities</a></li>
           <li><a href="community.html">Community</a></li>
           <li><a href="contact.html">Contact Us</a></li>
-          <li><a href="#applicant">Applicant Login</a></li> <!--ADD LINK TO RENT CAFE-->
-          <li><a href="#resident">Resident Login</a></li> <!--ADD LINK TO RENT CAFE-->
+          <li><a href="https://www.rentcafe.com/residentservices/apartmentsforrent/userregistration.aspx?source=property_search&propertyid=MjE0NzA2MQ%3d%3d-8EOeI6RCoaw%3d">Applicant Login</a></li> <!--ADD LINK TO RENT CAFE-->
+          <li><a href="https://urban-edge-llc-rentcafewebsite.securecafenet.com/residentservices/urban-edge-llc/userlogin">Resident Login</a></li> <!--ADD LINK TO RENT CAFE-->
         </ul>
       </nav>
     </div>
@@ -69,9 +69,172 @@
     </div>
   </header>
   <main>
+    <div class="form-content">
+        <div class="contact-text">
+          <h3>Contact Us</h3>
+          <h2>Make Your Move To Urban Edge</h2>
+          <p>Call our leasing office at
+          <a href="tel:+18162050993" aria-label="Call our leasing office at 816-205-0993">816-205-0993</a>,
+           or complete our online form to learn more about living in a one-bedroom, one-bedroom with den, or two-bedroom apartment for rent at Urban Edge in downtown Overland Park. One of our leasing experts will get back to you as soon as possible.</p>
+        </div>
+        <div class="ue-form-wrap">
+        <h3 class="ue-form-title">Please Email Me The Following:</h3>
+        <!-- Replace YOUR_FORM_ID with your real Formspree endpoint -->
+        <form 
+          id="ue-info-form" 
+          action="https://formspree.io/f/YOUR_FORM_ID" 
+          method="POST" 
+          novalidate
+        >
+          <fieldset class="ue-checks" aria-labelledby="request-list">
+            <legend id="request-list" class="sr-only">
+              Choose what to receive by email
+            </legend>
 
+            <label class="ue-check">
+              <input type="checkbox" id="selectAll" />
+              <span class="box"></span>
+              Select All
+            </label>
+
+            <label class="ue-check">
+              <input type="checkbox" name="topics" value="Pricing" />
+              <span class="box"></span>
+              Pricing
+            </label>
+
+            <label class="ue-check">
+              <input type="checkbox" name="topics" value="Floor Plans" />
+              <span class="box"></span>
+              Floor Plans
+            </label>
+
+            <label class="ue-check">
+              <input type="checkbox" name="topics" value="Apartment Images" />
+              <span class="box"></span>
+              Apartment Images
+            </label>
+
+            <label class="ue-check">
+              <input type="checkbox" name="topics" value="Urban Edge Promotions" />
+              <span class="box"></span>
+              Urban Edge Promotions
+            </label>
+
+            <label class="ue-check">
+              <input type="checkbox" name="topics" value="Walkable Hot Spots" />
+              <span class="box"></span>
+              Walkable Hot Spots
+            </label>
+          </fieldset>
+
+          <div class="ue-field" data-required>
+            <label for="name">
+              Name <span class="req">*</span>
+            </label>
+            <input 
+              type="text" 
+              id="name" 
+              name="name" 
+              autocomplete="name" 
+              required 
+            />
+            <p class="err" role="alert">Please enter your name.</p>
+          </div>
+
+          <div class="ue-field" data-required data-type="phone">
+            <label for="phone">
+              Phone <span class="req">*</span>
+            </label>
+            <input 
+              type="tel" 
+              id="phone" 
+              name="phone" 
+              inputmode="tel" 
+              autocomplete="tel" 
+              required 
+            />
+            <p class="err" role="alert">Please enter a valid phone number.</p>
+          </div>
+
+          <div class="ue-field" data-required data-type="email">
+            <label for="email">
+              Email <span class="req">*</span>
+            </label>
+            <input 
+              type="email" 
+              id="email" 
+              name="email" 
+              autocomplete="email" 
+              required 
+            />
+            <p class="err" role="alert">Please enter a valid email.</p>
+          </div>
+
+          <!-- This subject line shows up in Minnette’s email -->
+          <input 
+            type="hidden" 
+            name="_subject" 
+            value="New Request from Urban Edge Website" 
+          />
+
+          <div class="ue-actions">
+            <button type="submit" class="ue-btn">
+              SUBMIT
+            </button>
+          </div>
+
+          <!-- ✅ Toast for success/error messages -->
+          <div id="toast" class="toast" aria-live="polite"></div>
+        </form>
+      </div>
+    </div>
             
   </main>
+    <section class="footer-bg">
+  <footer class="site-footer">
+  <!-- Logo -->
+    <div class="footer-logo">
+      <img src="images/UE Logo.jpg" alt="Urban Edge Apartments Logo">
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-section">
+      <h3>Contact Us</h3>
+      <address class="contact-block">
+        <a href="https://maps.google.com/?q=7901 Conser Street Overland Park, KS 66204" 
+          target="_blank" rel="noopener">
+          Urban Edge Apartments<br>
+          7901 Conser Street<br>
+          Overland Park, KS 66204
+        </a><br>
+        Residential Leasing<br>
+        <a href="tel:+18162050993">816-205-0993</a>
+      </address>
+    </div>
+
+    <!-- Hours -->
+    <div class="footer-section">
+      <h3>Hours</h3>
+      <p>Monday: 10AM-5PM</p>
+      <p>Tuesday: 9AM-5PM</p>
+      <p>Wednesday: By Appointment</p>
+      <p>Thursday: 9AM-5PM</p>
+      <p>Friday: 9AM-5PM</p>
+      <p>Saturday: 12:30AM-4PM</p>
+      <p>Sunday: Closed</p>
+    </div>
+
+    <!-- Links -->
+    <div class="footer-section">
+      <h3>Links</h3>
+      <p><a href="https://theinterurbanlofts.com/">InterUrban Lofts</a></p>
+      <p><a href="https://theloftscc.com/">The LoFTs</a></p>
+    </div>
+  </footer>
+  </section>
+
+
 
 <script src="script.js"></script>
 <!--Start of Tawk.to Script-->

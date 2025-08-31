@@ -14,7 +14,6 @@ html, body {
 }
 
 
-
 .section-container {
   max-width: 1400px;
   margin: 0 auto;
@@ -178,7 +177,7 @@ html, body {
   background-image: url('images/Northwest_View_Building.png'); /* Replace with actual image path */
   background-size: cover;
   background-position: center;
-  height: 400px;
+  height: 550px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -583,7 +582,7 @@ home-intro-image-stack {
   background-image: url('images/fp_hero.jpeg'); /* Replace with actual image path */
   background-size: cover;
   background-position: center;
-  height: 400px;
+  height: 500px;
   display: flex;
   top: 80px;
   align-items: center;
@@ -605,6 +604,7 @@ home-intro-image-stack {
   display: grid;
   grid-template-columns: 1fr; /* mobile: one column */
   width: 100%;
+  max-width: 1280px;
   margin: 0 auto;
   padding: 30px;
   margin-top: 80px;
@@ -640,6 +640,7 @@ home-intro-image-stack {
   grid-template-columns:  1fr;
   width: 100%;
   margin: 0 auto;
+  max-width: 1280px;
   padding: 20px;
 }
 
@@ -661,11 +662,6 @@ home-intro-image-stack {
   color: rgb(117, 116, 116);
   font-family: "Inter", sans-serif;
   margin-left: 10px;
-}
-
-.features {
-  font-size: 15px;
-  margin-top: 30px;
 }
 
 .floorplan-options {
@@ -731,7 +727,7 @@ home-intro-image-stack {
   background-image: url('images/Courtyard_1.png'); /* Replace with actual image path */
   background-size: cover;
   background-position: center;
-  height: 400px;
+  height: 500px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -771,7 +767,7 @@ home-intro-image-stack {
   background-image: url('images/downtown-op.jpg'); /* Replace with actual image path */
   background-size: cover;
   background-position: center;
-  height: 400px;
+  height: 500px;
   display: flex;
   align-items: center;
   margin-top: 100px;
@@ -824,6 +820,213 @@ home-intro-image-stack {
   font-family: "Alumni Sans", sans-serif;
 }
 /*END CONTACT US HERO IMAGE*/
+
+/*CONTACT PAGE FORM AND CONTENT*/
+/* Screen-reader only helper used by the legend */
+/* Screen-reader only helper */
+.form-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.contact-text {
+  margin: 20px;
+}
+
+.contact-text h3{
+  font-family: "Alumni Sans SC", sans-serif; 
+  font-size: 20px;
+  letter-spacing: 1px;
+  font-style: italic;
+  color: #817460;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.contact-text h2 {
+  font-family: "Alumni Sans SC", sans-serif; 
+  font-weight: 600;
+  font-size: 27px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.contact-text p {
+  margin-top: 10px;
+  font-family: "Inter", sans-serif;
+  color: rgb(117, 116, 116);
+  font-size: 17px;
+  margin-left: 17px;
+  margin-right: 20px;
+}
+
+.sr-only {
+  position: absolute;
+  left: -9999px;
+}
+
+.ue-form-wrap {
+  margin: 0 auto;
+  width: 85%;
+  margin-bottom: 30px;
+  margin-top: 20px;
+ 
+}
+
+.ue-form-title {
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 1.25;
+  margin: 0 0 16px;
+  font-family: "Alumni Sans SC", sans-serif; 
+  text-transform: uppercase;
+}
+
+.ue-form-wrap label,
+.ue-form-wrap input,
+.ue-form-wrap button,
+.ue-form-wrap .err,
+.ue-form-wrap .toast {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Checkbox list */
+.ue-checks {
+  display: grid;
+  gap: 12px;
+  margin: 0 0 18px;
+  padding: 0;
+  border: 0;
+}
+
+.ue-check {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  color: #4a4a4a;
+  font-size: 18px;
+}
+
+.ue-check input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.ue-check .box {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #e5e5e5;
+  border-radius: 3px;
+  background: #ffffff;
+}
+
+.ue-check input:checked + .box {
+  border-color: #000000;
+  background: linear-gradient(#817460, #817460) center/70% 70% no-repeat #ffffff;
+}
+
+/* Fields */
+.ue-field {
+  margin: 14px 0;
+}
+
+.ue-field label {
+  display: block;
+  font-weight: 700;
+  font-size: 18px;
+  margin: 6px 0 8px;
+}
+
+.ue-field .req {
+  color: #b00000;
+}
+
+.ue-field input {
+  width: 100%;
+  height: 52px;
+  border: 3px solid #e5e5e5;
+  border-radius: 3px;
+  background: #ffffff;
+  padding: 0 14px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color .2s, background-color .2s, box-shadow .2s;
+}
+
+.ue-field input:focus {
+  border-color: #000000;
+  box-shadow: 0 0 0 2px #00000015;
+}
+
+.ue-field .err {
+  display: none;
+  margin-top: 6px;
+  color: #c62828;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.ue-field.is-error input {
+  border-color: #c62828;
+  background: #fff7f7;
+}
+
+.ue-field.is-error .err {
+  display: block;
+}
+
+/* Button */
+.ue-actions {
+  margin-top: 8px;
+}
+
+.ue-btn {
+  appearance: none;
+  border: 0;
+  border-radius: 3px;
+  background: #817460;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 14px 24px;
+  font-weight: 800;
+  letter-spacing: .6px;
+  font-size: 18px;
+}
+
+.ue-btn:focus-visible {
+  outline: 2px solid #000000;
+  outline-offset: 3px;
+}
+
+/* Toast (notification) */
+.toast {
+  margin-top: 12px;
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-weight: 600;
+  display: none;
+  transition: opacity .25s ease;
+}
+
+.toast.ok {
+  display: block;
+  background: #e8f7ed;
+  color: #1a7f3b;
+  border: 1px solid #bfe6cc;
+}
+
+.toast.err {
+  display: block;
+  background: #ffefef;
+  color: #a11b1b;
+  border: 1px solid #f2c5c5;
+}
+
+
 
 /*FOOTER STYLES*/
 
@@ -1149,6 +1352,11 @@ home-intro-image-stack {
     width: 40%;
   }
 
+  .form-content {
+    grid-template-columns: 1fr 1fr;
+    max-width: 900px;
+  }
+
   .footer-logo {
     display: inline-block;
   }
@@ -1191,6 +1399,10 @@ home-intro-image-stack {
   }
   .amenitiesbtn {
     left: 300px;
+  }
+
+  .form-content {
+    max-width: 1280px;
   }
 
   .site-footer {
