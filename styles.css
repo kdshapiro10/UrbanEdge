@@ -243,7 +243,6 @@ html, body {
 }
 
 .home-intro-text p {
-  margin-top: 10px;
   font-family: "Inter", sans-serif;
   color: rgb(117, 116, 116);
   font-size: 18px;
@@ -1026,7 +1025,9 @@ home-intro-image-stack {
   border: 1px solid #f2c5c5;
 }
 
-
+.contact-text a {
+  color:#71634f;
+}
 
 /*FOOTER STYLES*/
 
@@ -1166,7 +1167,8 @@ home-intro-image-stack {
   }
 
   .home-intro-text h2 {
-    font-size: 31px;
+    font-size: 25px;
+    margin-top: 20px;
   }
 
   /* Buttons container */
@@ -1187,7 +1189,7 @@ home-intro-image-stack {
   }
 
   #homeslide-text h2 {
-    font-size: 31px;
+    font-size: 25px;
 
   }
 
@@ -1216,7 +1218,7 @@ home-intro-image-stack {
   }
 
   .homeFpText h2 {
-   font-size: 28px;
+   font-size: 25px;
   }
 
   .homeFpImage {
@@ -1317,15 +1319,19 @@ home-intro-image-stack {
 
   .home-intro-text {
     width: 450px;
-    gap: 50px;
+    gap: 25px;
   }
 
   .home-intro-text h2 {
-    font-size: 35px;
+    font-size: 30px;
+  }
+
+  .home-intro-text p {
+    font-size: 16px;
   }
 
   #homeslide-text h2 {
-    font-size: 35px;
+    font-size: 30px;
   }
 
   #homeslide-text h3 {
@@ -1339,8 +1345,13 @@ home-intro-image-stack {
   .homeFpText {
     width: 480px;
   }
+
   .homeFpText h2 {
-    font-size: 35px;
+    font-size: 30px;
+  }
+
+  .intro-btns a {
+    font-size: 20px;
   }
 
   .community-section {
@@ -1362,9 +1373,13 @@ home-intro-image-stack {
   }
 }
 
-@media (min-width: 1185px) {
+@media (min-width: 1280px) {
   .amenitiesbtn {
     left: 250px;
+  }
+
+  .home-intro-text h2 {
+    font-size: 25px;
   }
 } 
 
