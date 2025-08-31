@@ -1350,6 +1350,7 @@ home-intro-image-stack {
     font-size: 30px;
   }
 
+
   .intro-btns a {
     font-size: 20px;
   }
@@ -1363,6 +1364,9 @@ home-intro-image-stack {
     width: 40%;
   }
 
+  .homeFpText a {
+    font-size: 20px;
+  }
   .form-content {
     grid-template-columns: 1fr 1fr;
     max-width: 900px;
