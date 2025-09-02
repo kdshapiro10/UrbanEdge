@@ -857,6 +857,10 @@ home-intro-image-stack {
   margin: 20px;
 }
 
+.contact-text p {
+  
+}
+
 .contact-text h3{
   font-family: "Alumni Sans SC", sans-serif; 
   font-size: 20px;
@@ -1308,7 +1312,7 @@ home-intro-image-stack {
     justify-self: start;   /* left-align the button */
      /* tweak if you want tighter spacing */
   }
-}
+
   .contact-text {
     margin-left: 40px;
   }
@@ -1322,7 +1326,7 @@ home-intro-image-stack {
     display: none;
   }
 
-
+}
   
 
   
