@@ -1,4 +1,45 @@
 
+/* Fade on load */
+.is-loaded .fade-in-on-load {
+  opacity: 1;
+  transform: none;
+}
+
+/* Scroll reveals */
+.reveal {
+  opacity: 0;
+  transform: translateY(10px);          /* move visually without affecting layout */
+  transition: opacity .9s ease, transform .6s ease;
+  will-change: opacity, transform;
+}
+.reveal.in-view {
+  opacity: 1;
+  transform: none;
+}
+
+/* Optional: gentle stagger for list items */
+.reveal-stagger > * {
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity .6s ease, transform .7s ease;
+}
+.reveal-stagger.in-view > * { opacity: 1; transform: none; }
+.reveal-stagger.in-view > *:nth-child(1) { transition-delay: .04s; }
+.reveal-stagger.in-view > *:nth-child(2) { transition-delay: .10s; }
+.reveal-stagger.in-view > *:nth-child(3) { transition-delay: .16s; }
+.reveal-stagger.in-view > *:nth-child(4) { transition-delay: .22s; }
+/* add more nth-childs if needed */
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .fade-in-on-load,
+  .reveal,
+  .reveal-stagger > * {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
 
 /* Reset & base styles */
 * {
@@ -1560,10 +1601,20 @@ home-intro-image-stack {
     width: 40%;
   }
 
+  .community-intro {
+    margin: 0 auto;
+  }
   
   #community-locations {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    max-width: 1000px;
+    margin: 0 auto;
+
+  }
+
+  #community-locations ul li {
+    width: 450px;
   }
 
   #community-locations h2 {

@@ -145,4 +145,26 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 })();
 
+// On first paint, allow "fade-in-on-load" elements to animate
+  window.addEventListener('load', () => {
+    document.body.classList.add('is-loaded');
+  });
+
+  // Scroll reveals using IntersectionObserver
+  const io = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        obs.unobserve(entry.target); // reveal once; remove this line if you want repeat
+      }
+    });
+  }, {
+    root: null,                 // viewport
+    threshold: 0.1,             // 10% visible
+    rootMargin: "0px 0px -10% 0px" // start a bit before fully visible
+  });
+
+  // Observe all reveal targets
+  document.querySelectorAll('.reveal, .reveal-stagger').forEach(el => io.observe(el));
+
 
