@@ -9,7 +9,7 @@
 .reveal {
   opacity: 0;
   transform: translateY(10px);          /* move visually without affecting layout */
-  transition: opacity .9s ease, transform .9s ease;
+  transition: opacity .2s ease, transform .9s ease;
   will-change: opacity, transform;
 }
 .reveal.in-view {
@@ -902,10 +902,9 @@ home-intro-image-stack {
 }
 
 #community-locations h3 {
-  font-family: "Alumni Sans", sans-serif;
-  font-size: 25px;
+  font-family: "Inter", sans-serif;
+  font-size: 19px;
   margin-bottom: 10px;
-  letter-spacing: 2px;
 }
 
 
@@ -1608,7 +1607,7 @@ home-intro-image-stack {
   #community-locations {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
 
   }
@@ -1642,6 +1641,7 @@ home-intro-image-stack {
   .layouts h2 {
     margin-top: 25px;
     margin-left: 30px;
+    font-size: 33px;
   }
 
   .layout-Desc {
@@ -1652,6 +1652,18 @@ home-intro-image-stack {
     font-size: 26px;
 }
 
+  .floorplan-table th {
+    font-size: 18px;
+  }
+
+   .floorplan-table td {
+    font-size: 17px;
+  }
+
+  .floorplan-text a {
+    font-size: 25px;
+    letter-spacing: 1px;
+    }
 
   .introFpImg img {
     width: 80%;
