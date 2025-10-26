@@ -9,7 +9,7 @@
 .reveal {
   opacity: 0;
   transform: translateY(10px);          /* move visually without affecting layout */
-  transition: opacity .2s ease, transform .9s ease;
+  transition: opacity .2s ease, transform .5s ease;
   will-change: opacity, transform;
 }
 .reveal.in-view {
