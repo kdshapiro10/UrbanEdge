@@ -293,6 +293,65 @@ s0.parentNode.insertBefore(s1,s0);
 }
 </script>
 <!--End of Tawk.to Script-->
-
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ApartmentComplex",
+      "@id": "https://www.urbanedgeop.com/#apartment",
+      "name": "Urban Edge Apartments",
+      "url": "https://www.urbanedgeop.com/",
+      "image": "https://www.urbanedgeop.com/images/UE%20Logo.jpg",
+      "logo": "https://www.urbanedgeop.com/images/UE%20Logo.jpg",
+      "telephone": "+1-816-205-0993",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "7900 Conser Street",
+        "addressLocality": "Overland Park",
+        "addressRegion": "KS",
+        "postalCode": "66204",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 38.985616,
+        "longitude": -94.676378
+      },
+      "hasMap": "https://www.google.com/maps/search/?api=1&query=7900+Conser+Street,+Overland+Park,+KS+66204",
+      "amenityFeature": [
+        { "@type": "LocationFeatureSpecification", "name": "Walkable Downtown Overland Park location", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Access to InterUrban Lofts amenities", "value": true }
+      ],
+      "openingHoursSpecification": [
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday"], "opens": "10:00", "closes": "17:00" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Thursday","Friday"], "opens": "09:00", "closes": "17:00" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Wednesday"], "opens": "00:00", "closes": "00:00" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday"], "opens": "12:30", "closes": "16:00" }
+      ],
+      "sameAs": [
+        "https://theinterurbanlofts.com/",
+        "https://theloftscc.com/"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.urbanedgeop.com/#website",
+      "url": "https://www.urbanedgeop.com/",
+      "name": "Urban Edge Apartments",
+      "inLanguage": "en-US",
+      "publisher": { "@id": "https://www.urbanedgeop.com/#apartment" }
+      /* If you add site search later, we can include a SearchAction here */
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.urbanedgeop.com/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.urbanedgeop.com/" }
+      ]
+    }
+  ]
+}
+</script>
 </body>
 </html>
