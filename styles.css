@@ -1294,6 +1294,7 @@ home-intro-image-stack {
 
 .apply-now {
   margin: 35px;
+  margin-top: 60px;
 }
   
 @keyframes menuFadeIn {
