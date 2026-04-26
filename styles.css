@@ -1291,10 +1291,19 @@ home-intro-image-stack {
 }
 
 
+#apply-main {
+  margin: 30px;
+}
 
-.apply-now {
-  margin: 35px;
-  margin-top: 60px;
+.iframe-container {
+    width: 100%;
+    height: 100%; /* removes horizontal scroll */
+}
+
+.iframe-container iframe {
+    width: 100%;
+    border: none;
+    display: block;
 }
   
 @keyframes menuFadeIn {
@@ -1323,6 +1332,7 @@ home-intro-image-stack {
 
 
 @media (min-width: 768px) {
+  
    .nav-links {
     display: none;
   }
@@ -1505,6 +1515,8 @@ home-intro-image-stack {
     margin-bottom: 30px;
   }
 
+
+
 }
   
 
@@ -1516,6 +1528,7 @@ home-intro-image-stack {
     gap: 2rem;
   }
 
+  
   .menu-toggle,
   .mobile-menu {
     display: none !important;
