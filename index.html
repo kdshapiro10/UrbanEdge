@@ -94,7 +94,7 @@
     <!-- Info bar -->
     <div class="info-bar">
         <div class="container">
-                <a href="#" class="info-link" onclick="Tawk_API.toggle(); return false;">
+                
                     <span class="icon">💬</span><span class="label">Chat Now</span>
                 </a>          
             <a href="mailto: info@UrbanEdgeOP.com" class="info-link"><span class="icon">📧</span><span class="label"> Email Us</span></a>
@@ -270,17 +270,44 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.cycle2/2.1.6/jquery.cycle2.min.js"></script>
 
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/686d7d2bb0df99190ce93f41/1ivlr1scv';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
+<!--Start of Entrata Script-->
+<script src="https://commoncf.entrata.com/javascript/i18n/i18n.min.js"></script>
+<script src="https://commoncf.entrata.com/javascript/i18n/entrata-ui.min.js"></script>
+
+<script>
+window.addEventListener("load", function () {
+
+    const config = {
+        subdomain: "https://application.urbanedgeop.com",
+        query: "is_responsive_snippet=1&snippet_type=contact_button"
+    };
+
+    function init() {
+        if (window.ppcb && window.ppcb.render) {
+            try {
+                window.ppcb.render(config);
+                console.log("Entrata rendered");
+            } catch (e) {
+                console.error("Entrata render error:", e);
+            }
+        } else {
+            setTimeout(init, 200);
+        }
+    }
+
+    // prevent duplicate execution
+    if (!window.__entrataInitialized) {
+        window.__entrataInitialized = true;
+
+        const script = document.createElement("script");
+        script.src = "https://commoncf.entrata.com/website_templates/_assets/_common/contact_btn_controller.min.js?ver=2936880";
+        script.async = true;
+        script.onload = init;
+
+        document.head.appendChild(script);
+    }
+
+});
 </script>
 
 <script type="application/ld+json">
