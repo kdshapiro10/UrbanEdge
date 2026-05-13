@@ -1747,3 +1747,16 @@ home-intro-image-stack {
     margin: 0 auto;
   }
 }
+
+#ppcb_btn,
+#ppcb_container,
+#ppcb_popup,
+#ppcb_notification {
+  z-index: 999999 !important;
+}
+
+#ppcb_popup {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
