@@ -1746,6 +1746,7 @@ home-intro-image-stack {
     justify-content: center;
     margin: 0 auto;
   }
+
 }
 
 #ppcb_btn,
@@ -1759,4 +1760,16 @@ home-intro-image-stack {
   display: block !important;
   visibility: visible !important;
   opacity: 1 !important;
+}
+
+.entrata-wrapper {
+  width: 100%;
+  overflow: visible;
+  
+}
+
+.entrata-wrapper iframe {
+  width: 100%;
+  border: none;
+  display: block;
 }
