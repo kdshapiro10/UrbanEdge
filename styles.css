@@ -1773,3 +1773,155 @@ home-intro-image-stack {
   border: none;
   display: block;
 }
+
+/* =========================
+   SPECIAL OFFER POPUP
+========================= */
+
+.special-popup-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background: rgba(0, 0, 0, 0.72);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.special-popup-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.special-popup {
+  width: 100%;
+  max-width: 420px;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  transform: scale(0.96);
+  transition: transform 0.3s ease;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
+}
+
+.special-popup-overlay.active .special-popup {
+  transform: scale(1);
+}
+
+.special-popup-close {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.85rem;
+  z-index: 2;
+  background: #fff;
+  border: none;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  font-size: 1.8rem;
+  line-height: 1;
+  cursor: pointer;
+  color: #111;
+}
+
+.special-popup-image {
+  height: 190px;
+}
+
+.special-popup-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.special-popup-content {
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+
+.special-popup-label {
+  font-family: "Inter", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: #9B876C;
+  margin-bottom: 0.75rem;
+}
+
+.special-popup h2 {
+  font-family: "Alumni Sans SC", "Alumni Sans", sans-serif;
+  font-size: clamp(3.6rem, 16vw, 5rem);
+  line-height: 0.85;
+  text-transform: uppercase;
+  color: #111;
+  margin: 0;
+}
+
+.special-popup-text {
+  font-family: "Inter", sans-serif;
+  color: #222;
+  line-height: 1.55;
+  margin: 1rem auto 1.4rem;
+  max-width: 330px;
+}
+
+.special-popup-btn {
+  display: inline-block;
+  background: #111;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  padding: 0.95rem 2.2rem;
+  transition: background 0.25s ease;
+}
+
+.special-popup-btn:hover {
+  background: #9B876C;
+  color: #fff;
+}
+
+.special-popup-note {
+  font-family: "Inter", sans-serif;
+  font-size: 0.72rem;
+  color: #555;
+  margin-top: 1rem;
+}
+
+/* Tablet and desktop */
+@media (min-width: 768px) {
+  .special-popup {
+    max-width: 900px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .special-popup-image {
+    height: auto;
+    order: 2;
+  }
+
+  .special-popup-content {
+    padding: 3.5rem 3rem;
+    text-align: left;
+  }
+
+  .special-popup-text {
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .special-popup {
+    max-width: 1000px;
+  }
+}

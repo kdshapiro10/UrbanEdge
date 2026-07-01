@@ -168,3 +168,40 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll('.reveal, .reveal-stagger').forEach(el => io.observe(el));
 
 
+// Special offer popup
+document.addEventListener("DOMContentLoaded", function () {
+  const popup = document.getElementById("specialPopup");
+  const closeBtn = document.querySelector(".special-popup-close");
+
+  if (!popup || !closeBtn) return;
+
+  const lastClosed = localStorage.getItem("specialPopupClosed");
+  const oneDay = 24 * 60 * 60 * 1000;
+
+  if (!lastClosed || Date.now() - Number(lastClosed) > oneDay) {
+    setTimeout(function () {
+      popup.classList.add("active");
+      popup.setAttribute("aria-hidden", "false");
+    }, 1000);
+  }
+
+  function closePopup() {
+    popup.classList.remove("active");
+    popup.setAttribute("aria-hidden", "true");
+    localStorage.setItem("specialPopupClosed", Date.now());
+  }
+
+  closeBtn.addEventListener("click", closePopup);
+
+  popup.addEventListener("click", function (e) {
+    if (e.target === popup) {
+      closePopup();
+    }
+  });
+
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && popup.classList.contains("active")) {
+      closePopup();
+    }
+  });
+});
