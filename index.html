@@ -274,7 +274,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.cycle2/2.1.6/jquery.cycle2.min.js"></script>
 
-<!-- Start of Entrata Chat Widget -->
+<!-- Entrata Chat Widget -->
 <script src="https://commoncf.entrata.com/javascript/i18n/i18n.min.js"></script>
 <script src="https://commoncf.entrata.com/javascript/i18n/entrata-ui.min.js"></script>
 
@@ -282,7 +282,7 @@
 window.addEventListener("load", function () {
   const config = {
     subdomain: "https://application.urbanedgeop.com",
-    query: "is_responsive_snippet=1&snippet_type=contact_button&is_collapsed=0"
+    query: "is_responsive_snippet=1&snippet_type=contact_button&host_domain=www.urbanedgeop.com"
   };
 
   function init() {
@@ -298,11 +298,9 @@ window.addEventListener("load", function () {
   script.src = "https://commoncf.entrata.com/website_templates/_assets/_common/contact_btn_controller.min.js";
   script.async = true;
   script.onload = init;
-
   document.body.appendChild(script);
 });
 </script>
-<!-- End of Entrata Chat Widget -->
 
 
 <script type="application/ld+json">
