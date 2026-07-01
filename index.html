@@ -274,46 +274,35 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.cycle2/2.1.6/jquery.cycle2.min.js"></script>
 
-<!--Start of Entrata Script-->
+<!-- Start of Entrata Chat Widget -->
 <script src="https://commoncf.entrata.com/javascript/i18n/i18n.min.js"></script>
 <script src="https://commoncf.entrata.com/javascript/i18n/entrata-ui.min.js"></script>
 
 <script>
 window.addEventListener("load", function () {
+  const config = {
+    subdomain: "https://application.urbanedgeop.com",
+    query: "is_responsive_snippet=1&snippet_type=contact_button&is_collapsed=0"
+  };
 
-    const config = {
-        subdomain: "https://application.urbanedgeop.com",
-        query: "is_responsive_snippet=1&snippet_type=contact_button"
-    };
-
-    function init() {
-        if (window.ppcb && window.ppcb.render) {
-            try {
-                window.ppcb.render(config);
-                console.log("Entrata rendered");
-            } catch (e) {
-                console.error("Entrata render error:", e);
-            }
-        } else {
-            setTimeout(init, 200);
-        }
+  function init() {
+    if (window.ppcb && window.ppcb.render) {
+      window.ppcb.render(config);
+      console.log("Entrata rendered");
+    } else {
+      setTimeout(init, 200);
     }
+  }
 
-    // prevent duplicate execution
-    if (!window.__entrataInitialized) {
-        window.__entrataInitialized = true;
+  const script = document.createElement("script");
+  script.src = "https://commoncf.entrata.com/website_templates/_assets/_common/contact_btn_controller.min.js";
+  script.async = true;
+  script.onload = init;
 
-        const script = document.createElement("script");
-        script.src = "https://commoncf.entrata.com/website_templates/_assets/_common/contact_btn_controller.min.js?ver=2936880";
-        script.async = true;
-        script.onload = init;
-
-        document.head.appendChild(script);
-    }
-
+  document.body.appendChild(script);
 });
 </script>
-
+<!-- End of Entrata Chat Widget -->
 
 
 <script type="application/ld+json">
