@@ -1867,7 +1867,8 @@ home-intro-image-stack {
 .special-popup-text {
   font-family: "Inter", sans-serif;
   color: #222;
-  line-height: 1.55;
+  line-height: 1.40;
+  font-size: 18px;
   margin: 1rem auto 1.4rem;
   max-width: 330px;
 }
@@ -1892,7 +1893,7 @@ home-intro-image-stack {
 
 .special-popup-note {
   font-family: "Inter", sans-serif;
-  font-size: 0.72rem;
+  font-size: 0.90rem;
   color: #555;
   margin-top: 1rem;
 }
