@@ -1898,6 +1898,22 @@ home-intro-image-stack {
   margin-top: 1rem;
 }
 
+/* Prevent Entrata widget from being clipped */
+iframe[src*="entrata"] {
+    max-width: calc(100% - 40px);
+    padding: 1000px;
+}
+
+.footer-bg,
+.site-footer,
+.footer-section {
+    overflow: visible !important;
+}
+
+/* Keep widget away from screen edges */
+iframe[src*="entrata"] {
+    margin: 20px !important;
+}
 /* Tablet and desktop */
 @media (min-width: 768px) {
   .special-popup {
